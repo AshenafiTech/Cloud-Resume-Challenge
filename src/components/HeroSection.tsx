@@ -17,7 +17,7 @@ const HeroSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-muted-foreground text-base text-center md:text-left mb-4">Let’s talk about code! Reach out via the links below.</p>
+              <p className="text-muted-foreground text-base text-center md:text-left mb-4 max-w-md">Let's talk about code, AI,<br className="hidden md:inline" /> and the cloud. Reach out.</p>
               <div className="flex flex-col gap-2 items-center md:items-start w-full">
                 <a href="mailto:ashenafigodanaj@gmail.com" className="flex items-center gap-2 text-base font-medium text-foreground hover:text-primary transition-colors">
                   {/* Email SVG */}
@@ -74,13 +74,13 @@ const HeroSection = () => {
               </div>
               <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                  <div className="w-12 h-12 bg-primary/10 rounaded-lg flex items-center justify-center text-primary">
                     <span><svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M12 22V8m7 7a7 7 0 0 1-14 0"/></svg></span>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">Community leader & keynote speaker</h3>
-                  <p className="text-muted-foreground leading-relaxed">Renowned for exceptional community leadership and engaging as a speaker at global tech conferences.</p>
+                  <h3 className="text-xl font-semibold text-foreground">Community leader & content creator</h3>
+                    <p className="text-muted-foreground leading-relaxed">Renowned for building cloud communities and sharing insights</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
@@ -91,7 +91,7 @@ const HeroSection = () => {
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-foreground">Empathy and professionalism</h3>
-                  <p className="text-muted-foreground leading-relaxed">Known for a unique blend of empathetic understanding and professional acumen in their approach to work and life.</p>
+                  <p className="text-muted-foreground leading-relaxed">Known for combining empathy with professionalism.</p>
                 </div>
               </div>
             </div>
