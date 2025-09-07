@@ -23,16 +23,16 @@ const Header = () => {
             Projects
           </a>
           <a 
-            href="#certificates" 
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Certifications
-          </a>
-          <a 
             href="#blogs" 
             className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           >
             Blogs
+          </a>
+          <a 
+            href="#certificates" 
+            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+          >
+            Certifications
           </a>
           <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
             <a href="#contact">Get in touch</a>

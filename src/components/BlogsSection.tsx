@@ -42,63 +42,72 @@ const BlogsSection = () => {
           </div>
 
           {/* Featured Posts Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Blog Card 1 */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
-              <CardContent className="p-0">
-                <img src="/public/blog1.png" alt="Kubernetes Deployment Strategies" className="rounded-t-xl w-full h-48 object-cover" />
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-green-400 text-sm">Jul 31, 2025</span>
-                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>2</span>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {/* Blog Card 1: EC2 */}
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+                  <CardContent className="p-0">
+                    <img src="/public/blog1.png" alt="Deploy Amazon EC2" className="rounded-t-xl w-full h-48 object-cover" />
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-green-400 text-sm">Mar 2, 2024</span>
+                      <a href="https://medium.com/@ashenafiGodana/deploy-amazon-ec2-elastic-compute-cloud-d02cd049ac10" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-green-400 text-sm hover:underline">
+                        <ExternalLink className="w-4 h-4" />
+                        Read
+                      </a>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">Deploying Amazon EC2 (Elastic Compute Cloud)</h3>
+                    <p className="text-secondary mb-4">Step-by-step guide to launching scalable virtual servers on AWS EC2, including setup, security, and best practices.</p>
+                    <div className="flex items-center gap-2 mt-4">
+                      <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
+                      <span className="font-semibold">Ashenafi Godana</span>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Kubernetes Deployment Strategies Explained</h3>
-                  <p className="text-secondary mb-4">Use cases, trade-offs, and answers to real interview scenarios</p>
-                  <div className="flex items-center gap-2 mt-4">
-                    <img src="/public/profile-image.jpg" alt="Vishakha Sadhwani" className="w-7 h-7 rounded-full" />
-                    <span className="font-semibold">Vishakha Sadhwani</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
 
             {/* Blog Card 2 */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
-              <CardContent className="p-0">
-                <img src="/public/blog2.png" alt="Cloud Engineer Roadmap" className="rounded-t-xl w-full h-48 object-cover" />
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-green-400 text-sm">Jun 19, 2025</span>
-                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>4</span>
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+                <CardContent className="p-0">
+                  <img src="/public/blog2.png" alt="Deploying Highly Available Multi-Tier Applications" className="rounded-t-xl w-full h-48 object-cover" />
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-green-400 text-sm">Mar 4, 2024</span>
+                      <a href="https://medium.com/@ashenafiGodana/deploying-highly-available-multi-tier-applications-9760d4bb8db5" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-green-400 text-sm hover:underline">
+                        <ExternalLink className="w-4 h-4" />
+                        Read
+                      </a>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">Deploying Highly Available Multi-Tier Applications</h3>
+                    <p className="text-secondary mb-4">A practical guide to architecting and deploying resilient, scalable multi-tier apps on AWS using EC2, RDS, ELB, CloudFront, and more.</p>
+                    <div className="flex items-center gap-2 mt-4">
+                      <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
+                      <span className="font-semibold">Ashenafi Godana</span>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Cloud Engineer Roadmap</h3>
-                  <p className="text-secondary mb-4">How to start, what to learn, and the resources to help you build real-world cloud skills</p>
-                  <div className="flex items-center gap-2 mt-4">
-                    <img src="/public/profile-image.jpg" alt="Vishakha Sadhwani" className="w-7 h-7 rounded-full" />
-                    <span className="font-semibold">Vishakha Sadhwani</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
 
             {/* Blog Card 3 */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
-              <CardContent className="p-0">
-                <img src="/public/blog3.png" alt="3 Skills that's working insanely well in Cloud/DevOps" className="rounded-t-xl w-full h-48 object-cover" />
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-green-400 text-sm">Aug 03, 2025</span>
-                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>2</span>
+              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+                <CardContent className="p-0">
+                      <img src="/serverless.webp" alt="Serverless Orchestration using AWS Step Functions" className="rounded-t-xl w-full h-48 object-cover" />
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-green-400 text-sm">Mar 5, 2024</span>
+                      <a href="https://medium.com/@ashenafiGodana/serverless-orchestration-using-aws-step-functions-3a3843454a61" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-green-400 text-sm hover:underline">
+                        <ExternalLink className="w-4 h-4" />
+                        Read
+                      </a>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">Serverless Orchestration using AWS Step Functions</h3>
+                    <p className="text-secondary mb-4">Learn how to orchestrate microservices and automate workflows using AWS Step Functions, with real-world use cases and practical examples.</p>
+                    <div className="flex items-center gap-2 mt-4">
+                      <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
+                      <span className="font-semibold">Ashenafi Godana</span>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">3 Skills that's working insanely well in Cloud/DevOps</h3>
-                  <p className="text-secondary mb-4">|| SPECIAL EDITION ||</p>
-                  <div className="flex items-center gap-2 mt-4">
-                    <img src="/public/profile-image.jpg" alt="Vishakha Sadhwani" className="w-7 h-7 rounded-full" />
-                    <span className="font-semibold">Vishakha Sadhwani</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
           </div>
 
           {/* CTA Card */}

@@ -8,11 +8,11 @@ import { Github, Linkedin, Twitter, Youtube, Mail, Send } from "lucide-react";
 
 const ContactSection = () => {
   const socialLinks = [
-    { icon: <Twitter className="h-5 w-5" />, href: "#", label: "Twitter" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Github className="h-5 w-5" />, href: "#", label: "GitHub" },
+  { icon: <Twitter className="h-5 w-5" />, href: "https://x.com/AshenafiGodana", label: "Twitter" },
+    { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/ashenafig/", label: "LinkedIn" },
+    { icon: <Github className="h-5 w-5" />, href: "https://github.com/AshenafiTech", label: "GitHub" },
     { icon: <Youtube className="h-5 w-5" />, href: "#", label: "YouTube" },
-    { icon: <Mail className="h-5 w-5" />, href: "mailto:", label: "Email" },
+    { icon: <Mail className="h-5 w-5" />, href: "mailto:ashenafigodanaj@gmail.com", label: "Email" },
   ];
 
   return (
@@ -87,6 +87,8 @@ const ContactSection = () => {
                           href={social.href}
                           className="flex items-center justify-center w-12 h-12 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105"
                           aria-label={social.label}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           {social.icon}
                         </a>
