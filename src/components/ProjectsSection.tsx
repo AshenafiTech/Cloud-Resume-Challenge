@@ -41,19 +41,64 @@ const ProjectsSection = () => {
             </p>
           </div>
 
-          {/* Project Highlights */}
+          {/* Featured Projects Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {highlights.map((highlight, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mx-auto mb-4">
-                    {highlight.icon}
+            {/* Project Card 1 */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <CardContent className="p-0">
+                <img src="/public/project1.png" alt="AI Chatbot Platform" className="rounded-t-xl w-full h-48 object-cover" />
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-green-400 text-sm">May 10, 2025</span>
+                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>5</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-3">{highlight.title}</h3>
-                  <p className="text-secondary text-sm leading-relaxed">{highlight.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                  <h3 className="text-2xl font-bold mb-2">AI Chatbot Platform</h3>
+                  <p className="text-secondary mb-4">A scalable chatbot platform for customer support, powered by natural language processing and machine learning.</p>
+                  <div className="flex items-center gap-2 mt-4">
+                    <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
+                    <span className="font-semibold">Ashenafi Godana</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Project Card 2 */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <CardContent className="p-0">
+                <img src="/public/project2.png" alt="Cloud Automation Toolkit" className="rounded-t-xl w-full h-48 object-cover" />
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-green-400 text-sm">Apr 22, 2025</span>
+                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>3</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Cloud Automation Toolkit</h3>
+                  <p className="text-secondary mb-4">Automate cloud infrastructure provisioning and management with a suite of open source tools.</p>
+                  <div className="flex items-center gap-2 mt-4">
+                    <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
+                    <span className="font-semibold">Ashenafi Godana</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Project Card 3 */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <CardContent className="p-0">
+                <img src="/public/project3.png" alt="DevOps Dashboard" className="rounded-t-xl w-full h-48 object-cover" />
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-green-400 text-sm">Mar 15, 2025</span>
+                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>4</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">DevOps Dashboard</h3>
+                  <p className="text-secondary mb-4">Monitor CI/CD pipelines, cloud resources, and system health in one unified dashboard.</p>
+                  <div className="flex items-center gap-2 mt-4">
+                    <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
+                    <span className="font-semibold">Ashenafi Godana</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* CTA */}

@@ -110,12 +110,7 @@ const CertificatesSection = () => {
             ))}
           </div>
 
-          {/* Note */}
-          <div className="text-center mt-12">
-            <p className="text-sm text-secondary">
-              Click on any certificate to view the credential details and verification.
-            </p>
-          </div>
+            {/* Note removed as requested */}
         </div>
       </div>
     </section>

@@ -41,19 +41,64 @@ const BlogsSection = () => {
             </p>
           </div>
 
-          {/* Features Grid */}
+          {/* Featured Posts Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {features.map((feature, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mx-auto mb-4">
-                    {feature.icon}
+            {/* Blog Card 1 */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <CardContent className="p-0">
+                <img src="/public/blog1.png" alt="Kubernetes Deployment Strategies" className="rounded-t-xl w-full h-48 object-cover" />
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-green-400 text-sm">Jul 31, 2025</span>
+                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>2</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-secondary text-sm leading-relaxed">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                  <h3 className="text-2xl font-bold mb-2">Kubernetes Deployment Strategies Explained</h3>
+                  <p className="text-secondary mb-4">Use cases, trade-offs, and answers to real interview scenarios</p>
+                  <div className="flex items-center gap-2 mt-4">
+                    <img src="/public/profile-image.jpg" alt="Vishakha Sadhwani" className="w-7 h-7 rounded-full" />
+                    <span className="font-semibold">Vishakha Sadhwani</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Blog Card 2 */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <CardContent className="p-0">
+                <img src="/public/blog2.png" alt="Cloud Engineer Roadmap" className="rounded-t-xl w-full h-48 object-cover" />
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-green-400 text-sm">Jun 19, 2025</span>
+                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>4</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Cloud Engineer Roadmap</h3>
+                  <p className="text-secondary mb-4">How to start, what to learn, and the resources to help you build real-world cloud skills</p>
+                  <div className="flex items-center gap-2 mt-4">
+                    <img src="/public/profile-image.jpg" alt="Vishakha Sadhwani" className="w-7 h-7 rounded-full" />
+                    <span className="font-semibold">Vishakha Sadhwani</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Blog Card 3 */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <CardContent className="p-0">
+                <img src="/public/blog3.png" alt="3 Skills that's working insanely well in Cloud/DevOps" className="rounded-t-xl w-full h-48 object-cover" />
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-green-400 text-sm">Aug 03, 2025</span>
+                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>2</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">3 Skills that's working insanely well in Cloud/DevOps</h3>
+                  <p className="text-secondary mb-4">|| SPECIAL EDITION ||</p>
+                  <div className="flex items-center gap-2 mt-4">
+                    <img src="/public/profile-image.jpg" alt="Vishakha Sadhwani" className="w-7 h-7 rounded-full" />
+                    <span className="font-semibold">Vishakha Sadhwani</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* CTA Card */}
@@ -64,10 +109,17 @@ const BlogsSection = () => {
                 Subscribe to my newsletter to get the latest articles, insights, and updates 
                 delivered directly to your inbox. No spam, just valuable content.
               </p>
-              <Button size="lg" className="group">
-                Read latest articles
-                <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <form className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="px-4 py-2 rounded border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary w-full sm:w-auto"
+                  required
+                />
+                <Button size="lg" type="submit" className="group">
+                  Subscribe to my newsletter
+                </Button>
+              </form>
             </CardContent>
           </Card>
         </div>

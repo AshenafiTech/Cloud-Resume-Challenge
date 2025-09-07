@@ -26,12 +26,12 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-bg py-20">
+    <section id="about" className="bg-background py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {highlights.map((highlight, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card key={index} className="bg-card border-border/40 hover:border-primary/20 transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
@@ -40,8 +40,8 @@ const AboutSection = () => {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-xl font-semibold">{highlight.title}</h3>
-                      <p className="text-secondary leading-relaxed">{highlight.description}</p>
+                      <h3 className="text-xl font-semibold text-foreground">{highlight.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{highlight.description}</p>
                     </div>
                   </div>
                 </CardContent>
