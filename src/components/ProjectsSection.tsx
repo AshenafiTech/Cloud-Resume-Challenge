@@ -3,45 +3,45 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PlayCircle, Users, Calendar, ExternalLink } from "lucide-react";
 
-const CoursesSection = () => {
+const ProjectsSection = () => {
   const highlights = [
     {
       icon: <Users className="h-6 w-6" />,
-      title: "Widely acclaimed courses",
-      description: "Join thousands who have benefitted from my courses, backed by thousands of positive reviews."
+      title: "Widely acclaimed projects",
+      description: "Join thousands who have benefitted from my projects, backed by thousands of positive reviews."
     },
     {
       icon: <Calendar className="h-6 w-6" />,
-      title: "Latest tech trends webinars", 
-      description: "Regular webinars and sessions to keep you updated with the latest technological advancements."
+      title: "Latest tech trends solutions", 
+      description: "Regular projects and innovations to keep you updated with the latest technological advancements."
     },
     {
       icon: <PlayCircle className="h-6 w-6" />,
-      title: "Free access to knowledge",
-      description: "All courses are completely free to watch, making quality education accessible to everyone."
+      title: "Open source contributions",
+      description: "All projects are open source and available for the community to learn and contribute."
     }
   ];
 
   return (
-    <section id="courses" className="py-20">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center space-y-4 mb-16">
             <Badge variant="secondary" className="mb-4">
-              Courses
+              Projects
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Teaching developers to upskill themselves.
+              Building innovative solutions for the future.
             </h2>
             <p className="text-lg text-secondary max-w-3xl mx-auto">
-              Join me as we break down the essentials of AI, DevOps, and modern development tools. 
-              Whether you're just starting out or looking to level up, these courses are built to 
-              help you navigate real-world tech challenges with confidence.
+              Explore my collection of projects spanning AI, DevOps, and modern development. 
+              Each project represents a solution to real-world challenges, showcasing innovative 
+              approaches to complex technical problems.
             </p>
           </div>
 
-          {/* Course Highlights */}
+          {/* Project Highlights */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {highlights.map((highlight, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -59,7 +59,7 @@ const CoursesSection = () => {
           {/* CTA */}
           <div className="text-center">
             <Button size="lg" className="group">
-              Explore courses
+              View projects
               <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
@@ -69,4 +69,4 @@ const CoursesSection = () => {
   );
 };
 
-export default CoursesSection;
+export default ProjectsSection;

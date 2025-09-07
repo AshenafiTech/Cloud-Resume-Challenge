@@ -21,9 +21,9 @@ const Footer = () => {
               <h4 className="font-medium">Quick Links</h4>
               <ul className="space-y-2 text-sm text-secondary">
                 <li><a href="#about" className="hover:text-foreground transition-colors">About</a></li>
-                <li><a href="#courses" className="hover:text-foreground transition-colors">Courses</a></li>
+                <li><a href="#projects" className="hover:text-foreground transition-colors">Projects</a></li>
                 <li><a href="#certificates" className="hover:text-foreground transition-colors">Certificates</a></li>
-                <li><a href="#sponsorships" className="hover:text-foreground transition-colors">Sponsorships</a></li>
+                <li><a href="#blogs" className="hover:text-foreground transition-colors">Blogs</a></li>
               </ul>
             </div>
 

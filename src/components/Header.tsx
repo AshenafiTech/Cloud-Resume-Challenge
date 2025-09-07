@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container mx-auto px-4 flex h-16 items-center justify-between max-w-6xl">
         <div className="flex items-center space-x-2">
           <h1 className="text-xl font-semibold">Your Name</h1>
         </div>
@@ -16,10 +16,10 @@ const Header = () => {
             About
           </a>
           <a 
-            href="#courses" 
+            href="#projects" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            Courses
+            Projects
           </a>
           <a 
             href="#certificates" 
@@ -28,13 +28,13 @@ const Header = () => {
             Certificates
           </a>
           <a 
-            href="#sponsorships" 
+            href="#blogs" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            Sponsorships
+            Blogs
           </a>
           <Button variant="default" size="sm">
-            Get in touch
+            <a href="#contact">Get in touch</a>
           </Button>
         </nav>
       </div>

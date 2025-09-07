@@ -39,22 +39,24 @@ const HeroSection = () => {
                   className="group"
                 >
                   <ChevronDown className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-                  Know more
+                  <a href="#about">Know more</a>
                 </Button>
                 <Button 
                   size="lg"
                   className="group"
                 >
-                  Get in touch
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <a href="#contact" className="flex items-center">
+                    Get in touch
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
               </div>
             </div>
 
             {/* Profile Image */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end order-first lg:order-last">
               <div className="relative">
-                <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
+                <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
                   <img
                     src={profileImage}
                     alt="Professional headshot"
