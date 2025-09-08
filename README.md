@@ -1,55 +1,58 @@
-# Ashenafi Godana - Portfolio
+# Ashenafi Godana - Portfolio Website
 
-Personal portfolio website showcasing my work as a Backend Developer & Cloud Engineer.
+> Personal portfolio showcasing my journey as a Backend Developer & Cloud Engineer
 
-## How to run locally
+## 🚀 About This Portfolio
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This is my personal portfolio website where I showcase my projects, share my expertise in cloud technologies, and connect with the developer community. As an AWS Cloud Captain and backend developer, I'm passionate about building scalable systems and mentoring others in their tech journey.
 
-Follow these steps:
+## 🛠️ Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui components
+- **Build Tool**: Vite
+- **Deployment**: Static hosting (Vercel, Netlify, GitHub Pages)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🏃‍♂️ Quick Start
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Clone the repository
+git clone https://github.com/AshenafiTech/portfolio.git
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Navigate to project directory
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 📦 Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## Deployment
-
-This project can be deployed to any static hosting service like Vercel, Netlify, or GitHub Pages.
-
-```sh
-npm run build
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build
+npm run lint     # Run ESLint
 ```
+
+## 🌟 Features
+
+- **Responsive Design**: Optimized for all devices
+- **Modern UI**: Clean, professional design with smooth animations
+- **Project Showcase**: Detailed project presentations with live demos
+- **Blog Integration**: Technical articles and insights
+- **Contact Form**: Easy way to get in touch
+- **Performance Optimized**: Fast loading and smooth interactions
+
+## 📧 Contact
+
+- **Email**: ashenafigodanaj@gmail.com
+- **LinkedIn**: [linkedin.com/in/ashenafig](https://linkedin.com/in/ashenafig)
+- **GitHub**: [github.com/AshenafiTech](https://github.com/AshenafiTech)
+
+---
+
+*Built with ❤️ by Ashenafi Godana*
