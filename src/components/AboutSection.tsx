@@ -26,28 +26,22 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-alt py-20">
+    <section id="about" className="bg-background py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
-            <p className="text-muted readable-width mx-auto">
-              Passionate about technology, community building, and creating impactful solutions.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             {highlights.map((highlight, index) => (
-              <Card key={index} className="card-hover bg-card border-border/40">
+              <Card key={index} className="bg-card border-border/40 hover:border-primary/20 transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary glow-primary">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
                         {highlight.icon}
                       </div>
                     </div>
-                    <div className="space-y-3">
-                      <h3 className="text-xl font-semibold text-primary">{highlight.title}</h3>
-                      <p className="text-muted leading-relaxed">{highlight.description}</p>
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-semibold text-foreground">{highlight.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{highlight.description}</p>
                     </div>
                   </div>
                 </CardContent>

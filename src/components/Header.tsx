@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Header = () => {
   return (
@@ -35,12 +34,9 @@ const Header = () => {
           >
             Certifications
           </a>
-          <div className="flex items-center gap-2">
-            <ThemeToggle />
-            <Button variant="default" size="sm">
-              <a href="#contact">Get in touch</a>
-            </Button>
-          </div>
+          <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90">
+            <a href="#contact">Get in touch</a>
+          </Button>
         </nav>
         </div>
       </div>

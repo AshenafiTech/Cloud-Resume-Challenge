@@ -2,117 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design system with improved readability and proper light/dark mode support */
+/* Definition of the design system inspired by techwithkunal.com
+All colors MUST be HSL.
+*/
 
 @layer base {
   :root {
-    /* Light theme colors */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 210 40% 94%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 263 70% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom semantic tokens for better readability */
-    --text-primary: 222.2 84% 4.9%;
-    --text-secondary: 215.4 16.3% 46.9%;
-    --text-muted: 215.4 16.3% 56.9%;
-    --section-bg: 0 0% 100%;
-    --section-alt: 210 40% 98%;
-    
-    /* Improved shadows for better depth */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    /* Custom design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(263 70% 50%), hsl(280 70% 60%));
+    --text-hero: 0 0% 98%;
+    --text-secondary: 240 5% 64.9%;
+    --section-bg: 240 10% 3.9%;
 
-    /* Sidebar tokens */
     --sidebar-background: 0 0% 98%;
+
     --sidebar-foreground: 240 5.3% 26.1%;
+
     --sidebar-primary: 240 5.9% 10%;
+
     --sidebar-primary-foreground: 0 0% 98%;
+
     --sidebar-accent: 240 4.8% 95.9%;
+
     --sidebar-accent-foreground: 240 5.9% 10%;
+
     --sidebar-border: 220 13% 91%;
+
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Dark theme colors inspired by tech5ense.com */
-    --background: 210 11% 8%;
-    --foreground: 210 11% 96%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 210 11% 10%;
-    --card-foreground: 210 11% 96%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 210 11% 10%;
-    --popover-foreground: 210 11% 96%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 171 82% 50%;
-    --primary-foreground: 210 11% 8%;
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 11% 12%;
-    --secondary-foreground: 210 11% 90%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 11% 12%;
-    --muted-foreground: 210 11% 65%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 210 11% 12%;
-    --accent-foreground: 210 11% 90%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 11% 96%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 210 11% 15%;
-    --input: 210 11% 15%;
-    --ring: 171 82% 50%;
-
-    /* Dark mode custom tokens inspired by tech5ense */
-    --text-primary: 210 11% 96%;
-    --text-secondary: 210 11% 75%;
-    --text-muted: 210 11% 65%;
-    --section-bg: 210 11% 8%;
-    --section-alt: 210 11% 9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 263 70% 50%;
     
-    /* Enhanced shadows for depth */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.4);
-
-    /* Dark sidebar tokens */
-    --sidebar-background: 210 11% 10%;
-    --sidebar-foreground: 210 11% 90%;
-    --sidebar-primary: 171 82% 50%;
-    --sidebar-primary-foreground: 210 11% 8%;
-    --sidebar-accent: 210 11% 12%;
-    --sidebar-accent-foreground: 210 11% 90%;
-    --sidebar-border: 210 11% 15%;
-    --sidebar-ring: 171 82% 50%;
+    /* Dark mode custom tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(263 70% 50%), hsl(280 70% 60%));
+    --text-hero: 0 0% 98%;
+    --text-secondary: 240 5% 64.9%;
+    --section-bg: 240 10% 3.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -123,101 +113,25 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    line-height: 1.6;
-    font-size: 16px;
   }
 
-  /* Tech5ense-inspired background pattern for dark mode */
-  .dark body {
-    background-image: radial-gradient(circle, rgba(78, 205, 196, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    background-attachment: fixed;
-  }
-
-  /* Improved typography hierarchy */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
-    line-height: 1.3;
+    @apply font-medium tracking-tight;
   }
 
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-
-  h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-  }
-
-  h3 {
-    @apply text-2xl md:text-3xl;
-  }
-
-  p {
-    line-height: 1.7;
-  }
-
-  /* Semantic color utilities */
-  .text-primary {
-    @apply text-[hsl(var(--text-primary))];
+  .hero-text {
+    @apply text-[hsl(var(--text-hero))];
   }
 
   .text-secondary {
     @apply text-[hsl(var(--text-secondary))];
   }
 
-  .text-muted {
-    @apply text-[hsl(var(--text-muted))];
-  }
-
   .section-bg {
     @apply bg-[hsl(var(--section-bg))];
   }
 
-  .section-alt {
-    @apply bg-[hsl(var(--section-alt))];
-  }
-
-  /* Tech5ense-inspired interactive elements */
-  .link-hover {
-    @apply transition-all duration-300 hover:text-primary hover:scale-105;
-  }
-
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
-    border: 1px solid rgba(78, 205, 196, 0.1);
-  }
-
-  .dark .card-hover:hover {
-    border-color: rgba(78, 205, 196, 0.3);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Enhanced focus styles for accessibility */
-  .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
-  }
-
-  /* Reading optimizations */
-  .readable-width {
-    max-width: 65ch;
-  }
-
-  .content-spacing > * + * {
-    margin-top: 1.5rem;
-  }
-
-  /* Tech5ense-inspired buttons */
-  .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90;
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
-  }
-
-  /* Glowing effect for primary elements in dark mode */
-  .dark .glow-primary {
-    box-shadow: 0 0 20px rgba(78, 205, 196, 0.2);
-  }
-
-  .dark .glow-primary:hover {
-    box-shadow: 0 0 30px rgba(78, 205, 196, 0.4);
+  .hero-gradient {
+    background: var(--hero-gradient);
   }
 }

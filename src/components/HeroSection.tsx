@@ -5,12 +5,12 @@ import profileImage from "@/assets/profile-image.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background">
-      <div className="container mx-auto px-4 pt-0 pb-4">
+  <div className="container mx-auto px-4 pt-0 pb-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-start">
           {/* Sidebar */}
           <aside className="w-full md:w-1/3 flex flex-col items-center md:items-start mb-8 md:mb-0">
             <div className="flex flex-col items-center md:items-start">
-              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg glow-primary mb-4">
+              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white/10 shadow-lg mb-4">
                 <img
                   src={profileImage}
                   alt="Profile"
@@ -43,55 +43,55 @@ const HeroSection = () => {
             <h1 className="text-3xl md:text-5xl font-extrabold text-foreground text-center mb-2">
               Hi! I'm Ashenafi Godana <span className="inline-block">👋</span>
             </h1>
-              <p className="text-lg md:text-xl text-muted text-center max-w-2xl mb-6 readable-width mx-auto">
-                I am a software engineering major graduating in June 2027. 
-                I invite you to explore my blogs, projects, and community activities.
-              </p>
+            <p className="text-lg md:text-xl text-secondary text-center max-w-2xl mb-6">
+              I am a software engineering major graduating in June 2027.<br />
+              I invite you to explore my blogs, projects, and community activities.
+            </p>
 
             {/* About cards horizontally */}
             <div className="w-full py-12 flex flex-row flex-wrap gap-8 justify-center">
               <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary glow-primary">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
                     <span><svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a4 4 0 0 0-3-3.87"/><path d="M9 20H4v-2a4 4 0 0 1 3-3.87"/><circle cx="12" cy="7" r="4"/></svg></span>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-primary">Backend Developer</h3>
-                  <p className="text-muted leading-relaxed">Building robust APIs, scalable systems, and efficient server-side solutions.</p>
+                  <h3 className="text-xl font-semibold text-foreground">Backend Developer</h3>
+                  <p className="text-muted-foreground leading-relaxed">Building robust APIs, scalable systems, and efficient server-side solutions.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary glow-primary">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
                     <span><svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M16.5 17.5a5 5 0 0 0-9 0"/><path d="M12 3v1m0 16v1m8.66-13.66l-.7.7M4.34 19.66l-.7.7M21 12h-1M4 12H3m16.66 7.66l-.7-.7M4.34 4.34l-.7-.7"/></svg></span>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-primary">Cloud Engineer</h3>
-                  <p className="text-muted leading-relaxed">Designing and managing cloud infrastructure for modern applications.</p>
+                  <h3 className="text-xl font-semibold text-foreground">Cloud Engineer</h3>
+                  <p className="text-muted-foreground leading-relaxed">Designing and managing cloud infrastructure for modern applications.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounaded-lg flex items-center justify-center text-primary glow-primary">
+                  <div className="w-12 h-12 bg-primary/10 rounaded-lg flex items-center justify-center text-primary">
                     <span><svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M12 22V8m7 7a7 7 0 0 1-14 0"/></svg></span>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-primary">Community leader & content creator</h3>
-                    <p className="text-muted leading-relaxed">Renowned for building cloud communities and sharing insights</p>
+                  <h3 className="text-xl font-semibold text-foreground">Community leader & content creator</h3>
+                    <p className="text-muted-foreground leading-relaxed">Renowned for building cloud communities and sharing insights</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary glow-primary">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
                     <span><svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21C7.5 21 2 17.5 2 12.5C2 8.5 6 5 12 5C18 5 22 8.5 22 12.5C22 17.5 16.5 21 12 21Z"/><path d="M12 11v2"/><circle cx="12" cy="14" r="1"/></svg></span>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-primary">Empathy and professionalism</h3>
-                  <p className="text-muted leading-relaxed">Known for combining empathy with professionalism.</p>
+                  <h3 className="text-xl font-semibold text-foreground">Empathy and professionalism</h3>
+                  <p className="text-muted-foreground leading-relaxed">Known for combining empathy with professionalism.</p>
                 </div>
               </div>
             </div>
