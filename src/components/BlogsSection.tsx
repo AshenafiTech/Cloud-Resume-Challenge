@@ -34,7 +34,7 @@ const BlogsSection = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-4xl mx-auto">
               Sharing insights and knowledge with the developer community
             </h2>
-            <p className="text-lg text-secondary max-w-3xl mx-auto">
+            <p className="text-lg text-muted max-w-3xl mx-auto readable-width">
               Dive into my thoughts on technology, career development, and industry trends. 
               I write about practical solutions, lessons learned, and insights that help developers 
               grow in their careers and build better software.
@@ -44,7 +44,7 @@ const BlogsSection = () => {
           {/* Featured Posts Grid */}
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               {/* Blog Card 1: EC2 */}
-                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+                <Card className="card-hover border-0 shadow-md bg-card">
                   <CardContent className="p-0">
                     <img src="/public/blog1.png" alt="Deploy Amazon EC2" className="rounded-t-xl w-full h-48 object-cover" />
                   <div className="p-6">
@@ -56,7 +56,7 @@ const BlogsSection = () => {
                       </a>
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Deploying Amazon EC2 (Elastic Compute Cloud)</h3>
-                    <p className="text-secondary mb-4">Step-by-step guide to launching scalable virtual servers on AWS EC2, including setup, security, and best practices.</p>
+                    <p className="text-muted mb-4 leading-relaxed">Step-by-step guide to launching scalable virtual servers on AWS EC2, including setup, security, and best practices.</p>
                     <div className="flex items-center gap-2 mt-4">
                       <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
                       <span className="font-semibold">Ashenafi Godana</span>
@@ -66,7 +66,7 @@ const BlogsSection = () => {
               </Card>
 
             {/* Blog Card 2 */}
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <Card className="card-hover border-0 shadow-md bg-card">
                 <CardContent className="p-0">
                   <img src="/public/blog2.png" alt="Deploying Highly Available Multi-Tier Applications" className="rounded-t-xl w-full h-48 object-cover" />
                   <div className="p-6">
@@ -78,7 +78,7 @@ const BlogsSection = () => {
                       </a>
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Deploying Highly Available Multi-Tier Applications</h3>
-                    <p className="text-secondary mb-4">A practical guide to architecting and deploying resilient, scalable multi-tier apps on AWS using EC2, RDS, ELB, CloudFront, and more.</p>
+                    <p className="text-muted mb-4 leading-relaxed">A practical guide to architecting and deploying resilient, scalable multi-tier apps on AWS using EC2, RDS, ELB, CloudFront, and more.</p>
                     <div className="flex items-center gap-2 mt-4">
                       <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
                       <span className="font-semibold">Ashenafi Godana</span>
@@ -88,7 +88,7 @@ const BlogsSection = () => {
               </Card>
 
             {/* Blog Card 3 */}
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <Card className="card-hover border-0 shadow-md bg-card">
                 <CardContent className="p-0">
                       <img src="/serverless.webp" alt="Serverless Orchestration using AWS Step Functions" className="rounded-t-xl w-full h-48 object-cover" />
                   <div className="p-6">
@@ -100,7 +100,7 @@ const BlogsSection = () => {
                       </a>
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Serverless Orchestration using AWS Step Functions</h3>
-                    <p className="text-secondary mb-4">Learn how to orchestrate microservices and automate workflows using AWS Step Functions, with real-world use cases and practical examples.</p>
+                    <p className="text-muted mb-4 leading-relaxed">Learn how to orchestrate microservices and automate workflows using AWS Step Functions, with real-world use cases and practical examples.</p>
                     <div className="flex items-center gap-2 mt-4">
                       <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
                       <span className="font-semibold">Ashenafi Godana</span>
@@ -114,7 +114,7 @@ const BlogsSection = () => {
           <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">Stay updated</h3>
-              <p className="text-secondary mb-6 max-w-2xl mx-auto">
+              <p className="text-muted mb-6 max-w-2xl mx-auto readable-width">
                 Subscribe to my newsletter to get the latest articles, insights, and updates 
                 delivered directly to your inbox. No spam, just valuable content.
               </p>

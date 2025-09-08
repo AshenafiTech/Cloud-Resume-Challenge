@@ -62,7 +62,7 @@ const CertificatesSection = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
               Professional Certifications & Achievements
             </h2>
-            <p className="text-lg text-secondary max-w-3xl mx-auto">
+            <p className="text-lg text-muted max-w-3xl mx-auto readable-width">
               Demonstrating expertise across cloud platforms, DevOps tools, and modern technologies 
               through industry-recognized certifications and continuous learning.
             </p>
@@ -101,7 +101,7 @@ const CertificatesSection = () => {
               const info = (
                 <div className="space-y-2">
                   <h3 className="font-semibold text-sm leading-tight">{cert.name}</h3>
-                  <p className="text-xs text-secondary">{cert.issuer}</p>
+                  <p className="text-xs text-muted">{cert.issuer}</p>
                   <Badge variant="outline" className="text-xs">
                     {cert.year}
                   </Badge>
@@ -125,14 +125,14 @@ const CertificatesSection = () => {
               if (cert.url && cert.url !== "#") {
                 return (
                   <a key={index} href={cert.url} target="_blank" rel="noopener noreferrer" className="block">
-                    <Card className="group border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+                    <Card className="group card-hover border-0 shadow-md cursor-pointer">
                       {cardContent}
                     </Card>
                   </a>
                 );
               } else {
                 return (
-                  <Card key={index} className="group border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+                  <Card key={index} className="group card-hover border-0 shadow-md cursor-pointer">
                     {cardContent}
                   </Card>
                 );

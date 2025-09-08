@@ -27,7 +27,7 @@ const ContactSection = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
               Let's work together
             </h2>
-            <p className="text-lg text-secondary max-w-3xl mx-auto">
+            <p className="text-lg text-muted max-w-3xl mx-auto readable-width">
               Have a project in mind or want to collaborate? I'd love to hear from you. 
               Drop me a message and let's create something amazing together.
             </p>
@@ -35,7 +35,7 @@ const ContactSection = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="border-0 shadow-lg">
+            <Card className="card-hover border-0 shadow-md">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold mb-6">Send me a message</h3>
                 <form className="space-y-6">
@@ -71,11 +71,11 @@ const ContactSection = () => {
 
             {/* Contact Info & Social */}
             <div className="space-y-8">
-              <Card className="border-0 shadow-lg">
+              <Card className="card-hover border-0 shadow-md">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-semibold mb-6">Connect with me</h3>
                   <div className="space-y-4">
-                    <p className="text-secondary">
+                    <p className="text-muted leading-relaxed">
                       I'm always excited to connect with fellow developers, entrepreneurs, 
                       and tech enthusiasts. Whether you have a question, want to collaborate, 
                       or just want to say hi, feel free to reach out!
@@ -101,7 +101,7 @@ const ContactSection = () => {
               <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
                 <CardContent className="p-6">
                   <h4 className="font-semibold mb-2">Response time</h4>
-                  <p className="text-sm text-secondary">
+                  <p className="text-sm text-muted leading-relaxed">
                     I typically respond to messages within 24-48 hours. 
                     For urgent matters, feel free to reach out on social media.
                   </p>

@@ -43,10 +43,10 @@ const HeroSection = () => {
             <h1 className="text-3xl md:text-5xl font-extrabold text-foreground text-center mb-2">
               Hi! I'm Ashenafi Godana <span className="inline-block">👋</span>
             </h1>
-            <p className="text-lg md:text-xl text-secondary text-center max-w-2xl mb-6">
-              I am a software engineering major graduating in June 2027.<br />
-              I invite you to explore my blogs, projects, and community activities.
-            </p>
+              <p className="text-lg md:text-xl text-muted text-center max-w-2xl mb-6 readable-width mx-auto">
+                I am a software engineering major graduating in June 2027. 
+                I invite you to explore my blogs, projects, and community activities.
+              </p>
 
             {/* About cards horizontally */}
             <div className="w-full py-12 flex flex-row flex-wrap gap-8 justify-center">
@@ -57,8 +57,8 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">Backend Developer</h3>
-                  <p className="text-muted-foreground leading-relaxed">Building robust APIs, scalable systems, and efficient server-side solutions.</p>
+                  <h3 className="text-xl font-semibold text-primary">Backend Developer</h3>
+                  <p className="text-muted leading-relaxed">Building robust APIs, scalable systems, and efficient server-side solutions.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
@@ -68,8 +68,8 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">Cloud Engineer</h3>
-                  <p className="text-muted-foreground leading-relaxed">Designing and managing cloud infrastructure for modern applications.</p>
+                  <h3 className="text-xl font-semibold text-primary">Cloud Engineer</h3>
+                  <p className="text-muted leading-relaxed">Designing and managing cloud infrastructure for modern applications.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
@@ -79,8 +79,8 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">Community leader & content creator</h3>
-                    <p className="text-muted-foreground leading-relaxed">Renowned for building cloud communities and sharing insights</p>
+                  <h3 className="text-xl font-semibold text-primary">Community leader & content creator</h3>
+                    <p className="text-muted leading-relaxed">Renowned for building cloud communities and sharing insights</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
@@ -90,8 +90,8 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">Empathy and professionalism</h3>
-                  <p className="text-muted-foreground leading-relaxed">Known for combining empathy with professionalism.</p>
+                  <h3 className="text-xl font-semibold text-primary">Empathy and professionalism</h3>
+                  <p className="text-muted leading-relaxed">Known for combining empathy with professionalism.</p>
                 </div>
               </div>
             </div>
