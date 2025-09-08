@@ -1,27 +1,28 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Users, Cloud, Mic, Heart } from "lucide-react";
 
 const AboutSection = () => {
   const highlights = [
     {
       icon: <Users className="h-6 w-6" />,
-      title: "Educator and mentor",
-      description: "Has educated thousands of developers, sharing in-depth knowledge and expertise in tech."
+      title: "Content creator and mentor",
+      description: "I have mentored students through cloud clubs and ALX programmes, and I share my knowledge by writing blogs and making YouTube videos."
     },
     {
       icon: <Cloud className="h-6 w-6" />,
-      title: "Cloud consultant", 
-      description: "Provides insightful consultancy to companies embarking on their cloud journeys."
+      title: "Cloud and backend developer", 
+      description: "Work with companies to build robust backend and cloud solutions."
     },
     {
       icon: <Mic className="h-6 w-6" />,
-      title: "Community leader & keynote speaker",
-      description: "Renowned for exceptional community leadership and engaging as a speaker at global tech conferences."
+      title: "Community leader & speaker",
+      description: "Active in developer communities and have spoken at local and online tech events."
     },
     {
       icon: <Heart className="h-6 w-6" />,
       title: "Empathy and professionalism",
-      description: "Known for a unique blend of empathetic understanding and professional acumen in their approach to work and life."
+      description: "I bring a unique balance of empathy and professional expertise to both my work and everyday life."
     }
   ];
 
@@ -29,7 +30,17 @@ const AboutSection = () => {
     <section id="about" className="bg-background py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="text-center space-y-4 mb-16">
+            <Badge variant="secondary" className="mb-4">About Me</Badge>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+              Passionate about <span className="gradient-text">Technology & Community</span>
+            </h2>
+            <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+              I'm a software engineering student with a passion for cloud technologies, backend development, 
+              and building communities. Here's what defines my approach to technology and life.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 items-start">
             {highlights.map((highlight, index) => (
               <Card key={index} className="bg-card border-border/40 hover:border-primary/20 transition-all duration-300">
                 <CardContent className="p-8">
@@ -41,7 +52,7 @@ const AboutSection = () => {
                     </div>
                     <div className="space-y-2">
                       <h3 className="text-xl font-semibold text-foreground">{highlight.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{highlight.description}</p>
+                      <p className="text-foreground/70 leading-relaxed">{highlight.description}</p>
                     </div>
                   </div>
                 </CardContent>

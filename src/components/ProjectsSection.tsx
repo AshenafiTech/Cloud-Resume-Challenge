@@ -32,9 +32,9 @@ const ProjectsSection = () => {
               Projects
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Building innovative solutions for the future.
+              Building <span className="gradient-text">innovative solutions</span> for the future.
             </h2>
-            <p className="text-lg text-secondary max-w-3xl mx-auto">
+            <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
               Explore my collection of projects spanning AI, DevOps, and modern development. 
               Each project represents a solution to real-world challenges, showcasing innovative 
               approaches to complex technical problems.
@@ -42,60 +42,45 @@ const ProjectsSection = () => {
           </div>
 
           {/* Featured Projects Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {/* Project Card 1 */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+            <Card className="glass-effect subtle-shadow hover-lift rounded-2xl border-0">
               <CardContent className="p-0">
-                <img src="/public/project1.png" alt="AI Chatbot Platform" className="rounded-t-xl w-full h-48 object-cover" />
+                <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-t-2xl flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10"></div>
+                  <div className="text-white text-5xl z-10">🤖</div>
+                </div>
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-green-400 text-sm">May 10, 2025</span>
-                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>5</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">AI Chatbot Platform</h3>
-                  <p className="text-secondary mb-4">A scalable chatbot platform for customer support, powered by natural language processing and machine learning.</p>
-                  <div className="flex items-center gap-2 mt-4">
-                    <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
-                    <span className="font-semibold">Ashenafi Godana</span>
-                  </div>
+                  <h3 className="text-xl font-bold mb-2">AI Chatbot Platform</h3>
+                  <p className="text-foreground/70 mb-4">A scalable chatbot platform for customer support, powered by natural language processing and machine learning.</p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Project Card 2 */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+            <Card className="glass-effect subtle-shadow hover-lift rounded-2xl border-0">
               <CardContent className="p-0">
-                <img src="/public/project2.png" alt="Cloud Automation Toolkit" className="rounded-t-xl w-full h-48 object-cover" />
+                <div className="w-full h-48 bg-gradient-to-br from-green-500/20 via-teal-500/20 to-blue-500/20 rounded-t-2xl flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 to-teal-600/10"></div>
+                  <div className="text-white text-5xl z-10">☁️</div>
+                </div>
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-green-400 text-sm">Apr 22, 2025</span>
-                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>3</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">Cloud Automation Toolkit</h3>
-                  <p className="text-secondary mb-4">Automate cloud infrastructure provisioning and management with a suite of open source tools.</p>
-                  <div className="flex items-center gap-2 mt-4">
-                    <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
-                    <span className="font-semibold">Ashenafi Godana</span>
-                  </div>
+                  <h3 className="text-xl font-bold mb-2">Cloud Automation Toolkit</h3>
+                  <p className="text-foreground/70 mb-4">Automate cloud infrastructure provisioning and management with a suite of open source tools.</p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Project Card 3 */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+            <Card className="glass-effect subtle-shadow hover-lift rounded-2xl border-0">
               <CardContent className="p-0">
-                <img src="/public/project3.png" alt="DevOps Dashboard" className="rounded-t-xl w-full h-48 object-cover" />
+                <div className="w-full h-48 bg-gradient-to-br from-orange-500/20 via-red-500/20 to-pink-500/20 rounded-t-2xl flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-600/10 to-red-600/10"></div>
+                  <div className="text-white text-5xl z-10">📊</div>
+                </div>
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-green-400 text-sm">Mar 15, 2025</span>
-                    <span className="flex items-center gap-1 text-green-400 text-sm"><svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c2.54 0 4.5 2.01 4.5 4.5S10.04 12 7.5 12c-1.74 0-3.41-1.01-4.5-2.09"/></svg>4</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">DevOps Dashboard</h3>
-                  <p className="text-secondary mb-4">Monitor CI/CD pipelines, cloud resources, and system health in one unified dashboard.</p>
-                  <div className="flex items-center gap-2 mt-4">
-                    <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
-                    <span className="font-semibold">Ashenafi Godana</span>
-                  </div>
+                  <h3 className="text-xl font-bold mb-2">DevOps Dashboard</h3>
+                  <p className="text-foreground/70 mb-4">Monitor CI/CD pipelines, cloud resources, and system health in one unified dashboard.</p>
                 </div>
               </CardContent>
             </Card>

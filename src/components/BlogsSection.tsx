@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Zap, Target, Users, ExternalLink } from "lucide-react";
+import blog1Image from "@/assets/blog1.png";
+import blog2Image from "@/assets/blog2.png";
 
 const BlogsSection = () => {
   const features = [
@@ -32,9 +34,9 @@ const BlogsSection = () => {
               Blog & Articles
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-4xl mx-auto">
-              Sharing insights and knowledge with the developer community
+              Sharing <span className="gradient-text">insights and knowledge</span> with the developer community
             </h2>
-            <p className="text-lg text-secondary max-w-3xl mx-auto">
+            <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
               Dive into my thoughts on technology, career development, and industry trends. 
               I write about practical solutions, lessons learned, and insights that help developers 
               grow in their careers and build better software.
@@ -42,79 +44,63 @@ const BlogsSection = () => {
           </div>
 
           {/* Featured Posts Grid */}
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-3 gap-10 mb-16">
               {/* Blog Card 1: EC2 */}
-                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+                <Card className="border border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] rounded-2xl bg-card overflow-hidden">
                   <CardContent className="p-0">
-                    <img src="/public/blog1.png" alt="Deploy Amazon EC2" className="rounded-t-xl w-full h-48 object-cover" />
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-green-400 text-sm">Mar 2, 2024</span>
-                      <a href="https://medium.com/@ashenafiGodana/deploy-amazon-ec2-elastic-compute-cloud-d02cd049ac10" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-green-400 text-sm hover:underline">
-                        <ExternalLink className="w-4 h-4" />
-                        Read
+                    <div className="aspect-[16/9] w-full overflow-hidden relative">
+                        <img src={blog1Image} alt="Deploy Amazon EC2" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="p-6 flex flex-col gap-2">
+                      <h3 className="text-xl font-bold mb-1 text-foreground">Deploying Amazon EC2 (Elastic Compute Cloud)</h3>
+                      <p className="text-foreground/70 mb-2">Step-by-step guide to launching scalable virtual servers on AWS EC2, including setup, security, and best practices.</p>
+                      <a href="https://medium.com/@ashenafiGodana/deploy-amazon-ec2-elastic-compute-cloud-d02cd049ac10" target="_blank" rel="noopener noreferrer" className="text-primary font-bold flex items-center gap-2 hover:underline mt-2">
+                        Read More <span className="text-primary text-lg">&rarr;</span>
                       </a>
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">Deploying Amazon EC2 (Elastic Compute Cloud)</h3>
-                    <p className="text-secondary mb-4">Step-by-step guide to launching scalable virtual servers on AWS EC2, including setup, security, and best practices.</p>
-                    <div className="flex items-center gap-2 mt-4">
-                      <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
-                      <span className="font-semibold">Ashenafi Godana</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
 
             {/* Blog Card 2 */}
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <Card className="border border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] rounded-2xl bg-card overflow-hidden">
                 <CardContent className="p-0">
-                  <img src="/public/blog2.png" alt="Deploying Highly Available Multi-Tier Applications" className="rounded-t-xl w-full h-48 object-cover" />
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-green-400 text-sm">Mar 4, 2024</span>
-                      <a href="https://medium.com/@ashenafiGodana/deploying-highly-available-multi-tier-applications-9760d4bb8db5" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-green-400 text-sm hover:underline">
-                        <ExternalLink className="w-4 h-4" />
-                        Read
-                      </a>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">Deploying Highly Available Multi-Tier Applications</h3>
-                    <p className="text-secondary mb-4">A practical guide to architecting and deploying resilient, scalable multi-tier apps on AWS using EC2, RDS, ELB, CloudFront, and more.</p>
-                    <div className="flex items-center gap-2 mt-4">
-                      <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
-                      <span className="font-semibold">Ashenafi Godana</span>
-                    </div>
+                  <div className="aspect-[16/9] w-full overflow-hidden relative">
+                      <img src={blog2Image} alt="Deploying Highly Available Multi-Tier Applications" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="p-6 flex flex-col gap-2">
+                    <h3 className="text-xl font-bold mb-1 text-foreground">Deploying Highly Available Multi-Tier Applications</h3>
+                    <p className="text-foreground/70 mb-2">A practical guide to architecting and deploying resilient, scalable multi-tier apps on AWS using EC2, RDS, ELB, CloudFront, and more.</p>
+                    <a href="https://medium.com/@ashenafiGodana/deploying-highly-available-multi-tier-applications-9760d4bb8db5" target="_blank" rel="noopener noreferrer" className="text-primary font-bold flex items-center gap-2 hover:underline mt-2">
+                      Learn More <span className="text-primary text-lg">&rarr;</span>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
 
             {/* Blog Card 3 */}
-              <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-xl bg-card">
+              <Card className="border border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] rounded-2xl bg-card overflow-hidden">
                 <CardContent className="p-0">
-                      <img src="/serverless.webp" alt="Serverless Orchestration using AWS Step Functions" className="rounded-t-xl w-full h-48 object-cover" />
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-green-400 text-sm">Mar 5, 2024</span>
-                      <a href="https://medium.com/@ashenafiGodana/serverless-orchestration-using-aws-step-functions-3a3843454a61" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-green-400 text-sm hover:underline">
-                        <ExternalLink className="w-4 h-4" />
-                        Read
-                      </a>
+                  <div className="aspect-[16/9] w-full overflow-hidden relative">
+                    <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                      <div className="text-6xl">⚡</div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">Serverless Orchestration using AWS Step Functions</h3>
-                    <p className="text-secondary mb-4">Learn how to orchestrate microservices and automate workflows using AWS Step Functions, with real-world use cases and practical examples.</p>
-                    <div className="flex items-center gap-2 mt-4">
-                      <img src="/public/profile-image.jpg" alt="Ashenafi Godana" className="w-7 h-7 rounded-full" />
-                      <span className="font-semibold">Ashenafi Godana</span>
-                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col gap-2">
+                    <h3 className="text-xl font-bold mb-1 text-foreground">Serverless Orchestration using AWS Step Functions</h3>
+                    <p className="text-foreground/70 mb-2">Learn how to orchestrate microservices and automate workflows using AWS Step Functions, with real-world use cases and practical examples.</p>
+                    <a href="https://medium.com/@ashenafiGodana/serverless-orchestration-using-aws-step-functions-3a3843454a61" target="_blank" rel="noopener noreferrer" className="text-primary font-bold flex items-center gap-2 hover:underline mt-2">
+                      Read More <span className="text-primary text-lg">&rarr;</span>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
           </div>
 
           {/* CTA Card */}
-          <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
+          <Card className="glass-effect subtle-shadow rounded-2xl border-0 bg-gradient-to-r from-primary/5 to-primary/10">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">Stay updated</h3>
-              <p className="text-secondary mb-6 max-w-2xl mx-auto">
+              <p className="text-foreground/80 mb-6 max-w-2xl mx-auto">
                 Subscribe to my newsletter to get the latest articles, insights, and updates 
                 delivered directly to your inbox. No spam, just valuable content.
               </p>

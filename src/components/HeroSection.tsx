@@ -1,24 +1,92 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ArrowRight, Github, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { ChevronDown, ArrowRight, Github, Linkedin, Twitter, Youtube, Download, MapPin, Calendar, Award } from "lucide-react";
 import profileImage from "@/assets/profile-image.jpg";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background">
-  <div className="container mx-auto px-4 pt-0 pb-4">
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
+      {/* Creative Animated Background */}
+      <div className="absolute inset-0">
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
+        
+        {/* Animated grid pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+            animation: 'grid-move 20s linear infinite'
+          }}></div>
+        </div>
+        
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 left-10 w-4 h-4 bg-primary/20 rotate-45 animate-float"></div>
+        <div className="absolute top-40 right-20 w-6 h-6 bg-blue-500/20 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-40 left-20 w-3 h-3 bg-emerald-500/20 rotate-45 animate-float" style={{animationDelay: '4s'}}></div>
+        <div className="absolute bottom-20 right-10 w-5 h-5 bg-purple-500/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-cyan-500/30 rotate-45 animate-float" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-2/3 right-1/3 w-4 h-4 bg-pink-500/20 rounded-full animate-float" style={{animationDelay: '5s'}}></div>
+        
+        {/* Large gradient orbs */}
+        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-gradient-to-r from-primary/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}}></div>
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-gradient-to-l from-blue-500/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}}></div>
+        
+        {/* Tech-themed floating elements */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="w-1 h-1 bg-primary/30 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
+        </div>
+        <div className="absolute top-1/3 right-1/4">
+          <div className="w-1 h-1 bg-emerald-500/30 rounded-full animate-ping" style={{animationDelay: '3s'}}></div>
+        </div>
+        <div className="absolute bottom-1/3 left-1/3">
+          <div className="w-1 h-1 bg-blue-500/30 rounded-full animate-ping" style={{animationDelay: '2s'}}></div>
+        </div>
+      </div>
+      
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <ChevronDown className="w-6 h-6 text-foreground/50" />
+      </div>
+      <div className="container mx-auto px-4 pt-0 pb-4 relative z-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-start">
           {/* Sidebar */}
           <aside className="w-full md:w-1/3 flex flex-col items-center md:items-start mb-8 md:mb-0">
-            <div className="flex flex-col items-center md:items-start">
-              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white/10 shadow-lg mb-4">
+            <div className={`flex flex-col items-center md:items-start w-full transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}>
+              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl mb-6 hover:scale-105 transition-transform duration-300 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-full"></div>
                 <img
                   src={profileImage}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-muted-foreground text-base text-center md:text-left mb-4 max-w-md">Let's talk about code, AI,<br className="hidden md:inline" /> and the cloud. Reach out.</p>
-              <div className="flex flex-col gap-2 items-center md:items-start w-full">
+              {/* Colorful Status Tags */}
+              <div className="flex flex-col gap-3 mb-6 w-full items-center md:items-start">
+                <div className="flex items-center gap-2 px-4 py-2 bg-yellow-400/10 rounded-lg border border-yellow-400/20">
+                  <Award className="w-4 h-4 text-yellow-400" />
+                  <span className="text-sm font-medium text-foreground/80">AWS Cloud Captain</span>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-emerald-500/8 rounded-lg border border-emerald-500/15">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-foreground/80">Available for work</span>
+                </div>
+              </div>
+              
+              <p className="text-foreground/80 text-base text-center md:text-left mb-6 leading-relaxed">Let's talk about code, AI, and the cloud. Always open to new opportunities and collaborations.</p>
+              <div className="flex flex-col gap-3 items-center md:items-start w-full">
                 <a href="mailto:ashenafigodanaj@gmail.com" className="flex items-center gap-2 text-base font-medium text-foreground hover:text-primary transition-colors">
                   {/* Email SVG */}
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M4 4h16v16H4V4zm0 0l8 8 8-8" /></svg>
@@ -38,63 +106,44 @@ const HeroSection = () => {
             </div>
           </aside>
 
-          {/* Main Content */}
-          <main className="flex-1 flex flex-col items-center justify-center">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-foreground text-center mb-2">
-              Hi! I'm Ashenafi Godana <span className="inline-block">👋</span>
+          {/* Main Content - Kunal Style */}
+          <main className={`flex-1 flex flex-col justify-center transition-all duration-1000 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}>
+            {/* Large Name - Kunal Style */}
+            <h1 className="text-5xl md:text-6xl font-black mb-4 leading-none tracking-tight">
+              <span className="gradient-text">Ashenafi Godana</span>
             </h1>
-            <p className="text-lg md:text-xl text-secondary text-center max-w-2xl mb-6">
-              I am a software engineering major graduating in June 2027.<br />
-              I invite you to explore my blogs, projects, and community activities.
-            </p>
-
-            {/* About cards horizontally */}
-            <div className="w-full py-12 flex flex-row flex-wrap gap-8 justify-center">
-              <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                    <span><svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a4 4 0 0 0-3-3.87"/><path d="M9 20H4v-2a4 4 0 0 1 3-3.87"/><circle cx="12" cy="7" r="4"/></svg></span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">Backend Developer</h3>
-                  <p className="text-muted-foreground leading-relaxed">Building robust APIs, scalable systems, and efficient server-side solutions.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                    <span><svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M16.5 17.5a5 5 0 0 0-9 0"/><path d="M12 3v1m0 16v1m8.66-13.66l-.7.7M4.34 19.66l-.7.7M21 12h-1M4 12H3m16.66 7.66l-.7-.7M4.34 4.34l-.7-.7"/></svg></span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">Cloud Engineer</h3>
-                  <p className="text-muted-foreground leading-relaxed">Designing and managing cloud infrastructure for modern applications.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounaded-lg flex items-center justify-center text-primary">
-                    <span><svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M12 22V8m7 7a7 7 0 0 1-14 0"/></svg></span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">Community leader & content creator</h3>
-                    <p className="text-muted-foreground leading-relaxed">Renowned for building cloud communities and sharing insights</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 min-w-[250px] max-w-xs">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                    <span><svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 21C7.5 21 2 17.5 2 12.5C2 8.5 6 5 12 5C18 5 22 8.5 22 12.5C22 17.5 16.5 21 12 21Z"/><path d="M12 11v2"/><circle cx="12" cy="14" r="1"/></svg></span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-foreground">Empathy and professionalism</h3>
-                  <p className="text-muted-foreground leading-relaxed">Known for combining empathy with professionalism.</p>
-                </div>
-              </div>
+            
+            {/* Role/Title - Clean and Bold */}
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground/90 mb-8">
+              Backend Developer & Cloud Engineer
+            </h2>
+            
+            {/* Description - Concise like Kunal's */}
+            <div className="mb-10 max-w-2xl space-y-4">
+              <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
+                I help teams and organizations build scalable backend and cloud solutions tailored to their needs. I specialize in designing and implementing cloud architectures using AWS, Python, Kubernetes, and Infrastructure as Code.
+              </p>
+              <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
+                As an AWS Cloud Captain, I lead and mentor a community of students in cloud computing by organizing events, sharing resources, and guiding peers in learning AWS technologies. I share my expertise through blogs, videos, and mentoring in developer communities, helping others grow and succeed in tech.
+              </p>
             </div>
+            
+            {/* CTA Buttons - Kunal Style */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-4 h-auto font-semibold" 
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                View My Work
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+
+            </div>
+            
+
           </main>
         </div>
       </div>

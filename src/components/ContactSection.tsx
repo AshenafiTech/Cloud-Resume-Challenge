@@ -25,7 +25,7 @@ const ContactSection = () => {
               Get in touch
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Let's work together
+              Let's <span className="gradient-text">work together</span>
             </h2>
             <p className="text-lg text-secondary max-w-3xl mx-auto">
               Have a project in mind or want to collaborate? I'd love to hear from you. 
@@ -35,7 +35,7 @@ const ContactSection = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="border-0 shadow-lg">
+            <Card className="glass-effect subtle-shadow border-0 rounded-2xl">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold mb-6">Send me a message</h3>
                 <form className="space-y-6">
@@ -71,7 +71,7 @@ const ContactSection = () => {
 
             {/* Contact Info & Social */}
             <div className="space-y-8">
-              <Card className="border-0 shadow-lg">
+              <Card className="glass-effect subtle-shadow border-0 rounded-2xl">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-semibold mb-6">Connect with me</h3>
                   <div className="space-y-4">
@@ -98,7 +98,7 @@ const ContactSection = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
+              <Card className="glass-effect subtle-shadow border-0 rounded-2xl bg-gradient-to-r from-primary/5 to-primary/10">
                 <CardContent className="p-6">
                   <h4 className="font-semibold mb-2">Response time</h4>
                   <p className="text-sm text-secondary">
