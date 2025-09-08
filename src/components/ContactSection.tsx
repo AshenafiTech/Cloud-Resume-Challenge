@@ -85,7 +85,7 @@ const ContactSection = () => {
                         <a
                           key={index}
                           href={social.href}
-                          className="flex items-center justify-center w-12 h-12 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg transition-all duration-300 hover:scale-105"
+                          className="flex items-center justify-center w-12 h-12 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-all duration-300 hover:scale-105 glow-primary"
                           aria-label={social.label}
                           target="_blank"
                           rel="noopener noreferrer"

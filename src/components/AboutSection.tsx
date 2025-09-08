@@ -41,7 +41,7 @@ const AboutSection = () => {
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary glow-primary">
                         {highlight.icon}
                       </div>
                     </div>
