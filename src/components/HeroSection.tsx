@@ -15,48 +15,93 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
       {/* Creative Animated Background */}
       <div className="absolute inset-0">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5"></div>
+        {/* Subtle grid lines background */}
+        <div className="absolute inset-0 pointer-events-none" style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(255, 221, 102, 0.12) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 221, 102, 0.12) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+          zIndex: 0
+        }}></div>
+        {/* Multi-layer gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-blue-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-emerald-500/5 via-transparent to-purple-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/3 via-transparent to-pink-500/3"></div>
         
-        {/* Animated grid pattern */}
-        <div className="absolute inset-0 opacity-20">
+        {/* Animated grid patterns */}
+        <div className="absolute inset-0 opacity-15">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(147, 51, 234, 0.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(147, 51, 234, 0.15) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px',
-            animation: 'grid-move 20s linear infinite'
+            backgroundSize: '60px 60px',
+            animation: 'grid-move 25s linear infinite'
+          }}></div>
+        </div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px',
+            animation: 'grid-move 30s linear infinite reverse'
           }}></div>
         </div>
         
-        {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-10 w-4 h-4 bg-primary/20 rotate-45 animate-float"></div>
-        <div className="absolute top-40 right-20 w-6 h-6 bg-blue-500/20 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-40 left-20 w-3 h-3 bg-emerald-500/20 rotate-45 animate-float" style={{animationDelay: '4s'}}></div>
-        <div className="absolute bottom-20 right-10 w-5 h-5 bg-purple-500/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-cyan-500/30 rotate-45 animate-float" style={{animationDelay: '3s'}}></div>
-        <div className="absolute top-2/3 right-1/3 w-4 h-4 bg-pink-500/20 rounded-full animate-float" style={{animationDelay: '5s'}}></div>
+        {/* Enhanced floating geometric shapes */}
+        <div className="absolute top-16 left-8 w-6 h-6 bg-gradient-to-br from-primary/30 to-primary/10 rotate-45 animate-float shadow-lg"></div>
+        <div className="absolute top-32 right-16 w-8 h-8 bg-gradient-to-br from-blue-500/30 to-blue-500/10 rounded-full animate-float shadow-lg" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-32 left-16 w-5 h-5 bg-gradient-to-br from-emerald-500/30 to-emerald-500/10 rotate-45 animate-float shadow-lg" style={{animationDelay: '4s'}}></div>
+        <div className="absolute bottom-16 right-8 w-7 h-7 bg-gradient-to-br from-purple-500/30 to-purple-500/10 rounded-full animate-float shadow-lg" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/3 left-1/4 w-4 h-4 bg-gradient-to-br from-cyan-500/40 to-cyan-500/15 rotate-45 animate-float shadow-lg" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-2/3 right-1/3 w-6 h-6 bg-gradient-to-br from-pink-500/30 to-pink-500/10 rounded-full animate-float shadow-lg" style={{animationDelay: '5s'}}></div>
+        <div className="absolute top-1/4 right-1/2 w-3 h-3 bg-gradient-to-br from-yellow-500/30 to-yellow-500/10 rotate-45 animate-float shadow-lg" style={{animationDelay: '6s'}}></div>
+        <div className="absolute bottom-1/4 left-1/2 w-5 h-5 bg-gradient-to-br from-indigo-500/30 to-indigo-500/10 rounded-full animate-float shadow-lg" style={{animationDelay: '7s'}}></div>
         
-        {/* Large gradient orbs */}
-        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-gradient-to-r from-primary/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}}></div>
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-gradient-to-l from-blue-500/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDuration: '6s', animationDelay: '2s'}}></div>
+        {/* Large gradient orbs with enhanced effects */}
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-gradient-to-r from-primary/15 via-primary/8 to-transparent rounded-full blur-3xl animate-pulse opacity-60" style={{animationDuration: '4s'}}></div>
+        <div className="absolute bottom-1/4 -right-32 w-[28rem] h-[28rem] bg-gradient-to-l from-blue-500/15 via-blue-500/8 to-transparent rounded-full blur-3xl animate-pulse opacity-60" style={{animationDuration: '6s', animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-gradient-to-br from-emerald-500/10 via-emerald-500/5 to-transparent rounded-full blur-3xl animate-pulse opacity-40" style={{animationDuration: '8s', animationDelay: '4s'}}></div>
         
-        {/* Tech-themed floating elements */}
+        {/* Tech-themed floating elements with enhanced graphics */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="w-1 h-1 bg-primary/30 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
+          <div className="w-2 h-2 bg-gradient-to-br from-primary/50 to-primary/20 rounded-full animate-ping shadow-lg" style={{animationDelay: '1s'}}></div>
         </div>
         <div className="absolute top-1/3 right-1/4">
-          <div className="w-1 h-1 bg-emerald-500/30 rounded-full animate-ping" style={{animationDelay: '3s'}}></div>
+          <div className="w-2 h-2 bg-gradient-to-br from-emerald-500/50 to-emerald-500/20 rounded-full animate-ping shadow-lg" style={{animationDelay: '3s'}}></div>
         </div>
         <div className="absolute bottom-1/3 left-1/3">
-          <div className="w-1 h-1 bg-blue-500/30 rounded-full animate-ping" style={{animationDelay: '2s'}}></div>
+          <div className="w-2 h-2 bg-gradient-to-br from-blue-500/50 to-blue-500/20 rounded-full animate-ping shadow-lg" style={{animationDelay: '2s'}}></div>
+        </div>
+        <div className="absolute top-3/4 right-1/2">
+          <div className="w-1.5 h-1.5 bg-gradient-to-br from-purple-500/50 to-purple-500/20 rounded-full animate-ping shadow-lg" style={{animationDelay: '4s'}}></div>
+        </div>
+        <div className="absolute top-1/4 left-3/4">
+          <div className="w-1.5 h-1.5 bg-gradient-to-br from-cyan-500/50 to-cyan-500/20 rounded-full animate-ping shadow-lg" style={{animationDelay: '5s'}}></div>
+        </div>
+        
+        {/* Flowing particle trails */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-1 h-1 bg-primary/20 rounded-full animate-float" style={{top: '10%', left: '5%', animationDuration: '15s', animationDelay: '0s'}}></div>
+          <div className="absolute w-1 h-1 bg-blue-500/20 rounded-full animate-float" style={{top: '20%', left: '15%', animationDuration: '18s', animationDelay: '2s'}}></div>
+          <div className="absolute w-1 h-1 bg-emerald-500/20 rounded-full animate-float" style={{top: '30%', left: '25%', animationDuration: '20s', animationDelay: '4s'}}></div>
+          <div className="absolute w-1 h-1 bg-purple-500/20 rounded-full animate-float" style={{top: '40%', left: '35%', animationDuration: '22s', animationDelay: '6s'}}></div>
+          <div className="absolute w-1 h-1 bg-cyan-500/20 rounded-full animate-float" style={{top: '50%', left: '45%', animationDuration: '16s', animationDelay: '8s'}}></div>
+          <div className="absolute w-1 h-1 bg-pink-500/20 rounded-full animate-float" style={{top: '60%', left: '55%', animationDuration: '19s', animationDelay: '10s'}}></div>
+          <div className="absolute w-1 h-1 bg-yellow-500/20 rounded-full animate-float" style={{top: '70%', left: '65%', animationDuration: '17s', animationDelay: '12s'}}></div>
+          <div className="absolute w-1 h-1 bg-indigo-500/20 rounded-full animate-float" style={{top: '80%', left: '75%', animationDuration: '21s', animationDelay: '14s'}}></div>
         </div>
       </div>
       
-      {/* Scroll indicator */}
+      {/* Enhanced scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-6 h-6 text-foreground/50" />
+        <div className="relative">
+          <div className="absolute inset-0 bg-primary/20 rounded-full blur-md animate-pulse"></div>
+          <ChevronDown className="w-6 h-6 text-foreground/60 relative z-10 hover:text-primary transition-colors duration-300" />
+        </div>
       </div>
       <div className="container mx-auto px-4 pt-0 pb-4 relative z-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-start">
@@ -65,27 +110,29 @@ const HeroSection = () => {
             <div className={`flex flex-col items-center md:items-start w-full transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
-              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl mb-6 hover:scale-105 transition-transform duration-300 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-full"></div>
+              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl mb-6 hover:scale-110 transition-all duration-500 relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-blue-500/20 to-emerald-500/20 rounded-full animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-tl from-purple-500/20 via-transparent to-cyan-500/20 rounded-full group-hover:animate-spin" style={{animationDuration: '10s'}}></div>
                 <img
                   src={profileImage}
                   alt="Profile"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover relative z-10 group-hover:brightness-110 transition-all duration-500"
                 />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-transparent via-transparent to-primary/10 group-hover:to-primary/20 transition-all duration-500"></div>
               </div>
               {/* Colorful Status Tags */}
               <div className="flex flex-col gap-3 mb-6 w-full items-center md:items-start">
-                <div className="flex items-center gap-2 px-4 py-2 bg-yellow-400/10 rounded-lg border border-yellow-400/20">
-                  <Award className="w-4 h-4 text-yellow-400" />
+                <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400/15 to-yellow-400/5 rounded-lg border border-yellow-400/30 hover:border-yellow-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/20">
+                  <Award className="w-4 h-4 text-yellow-400 animate-pulse" />
                   <span className="text-sm font-medium text-foreground/80">AWS Cloud Captain</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-emerald-500/8 rounded-lg border border-emerald-500/15">
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/15 to-emerald-500/5 rounded-lg border border-emerald-500/30 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-lg shadow-emerald-500/50"></div>
                   <span className="text-sm font-medium text-foreground/80">Available for work</span>
                 </div>
               </div>
               
-              <p className="text-foreground/80 text-base text-center md:text-left mb-6 leading-relaxed">Let's talk about code, AI, and the cloud. Always open to new opportunities and collaborations.</p>
+              <p className="text-foreground/80 text-base text-center md:text-left mb-6 leading-relaxed">Let's talk about code, AI, and the cloud.</p>
               <div className="flex flex-col gap-3 items-center md:items-start w-full">
                 <a href="mailto:ashenafigodanaj@gmail.com" className="flex items-center gap-2 text-base font-medium text-foreground hover:text-primary transition-colors">
                   {/* Email SVG */}
@@ -110,23 +157,23 @@ const HeroSection = () => {
           <main className={`flex-1 flex flex-col justify-center transition-all duration-1000 delay-300 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}>
-            {/* Large Name - Kunal Style */}
-            <h1 className="text-5xl md:text-6xl font-black mb-4 leading-none tracking-tight">
-              <span className="gradient-text">Ashenafi Godana</span>
+            {/* Badge */}
+            <div className="mb-4">
+              <Badge className="px-4 py-2 text-base font-semibold bg-background text-foreground shadow">👋 Hello, I'm</Badge>
+            </div>
+            {/* Large Name - Gradient */}
+            <h1 className="text-6xl md:text-7xl font-extrabold mb-4 leading-none tracking-tight bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text">
+              Ashenafi Godana
             </h1>
-            
-            {/* Role/Title - Clean and Bold */}
-            <h2 className="text-2xl md:text-4xl font-bold text-foreground/90 mb-8">
+            {/* Role/Title */}
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground/80 mb-8">
               Backend Developer & Cloud Engineer
             </h2>
-            
-            {/* Description - Concise like Kunal's */}
-            <div className="mb-10 max-w-2xl space-y-4">
+            {/* Description */}
+            <div className="mb-10 max-w-2xl">
               <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-                I help teams and organizations build scalable backend and cloud solutions tailored to their needs. I specialize in designing and implementing cloud architectures using AWS, Python, Kubernetes, and Infrastructure as Code.
-              </p>
-              <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-                As an AWS Cloud Captain, I lead and mentor a community of students in cloud computing by organizing events, sharing resources, and guiding peers in learning AWS technologies. I share my expertise through blogs, videos, and mentoring in developer communities, helping others grow and succeed in tech.
+                I help teams and organizations build scalable backend and cloud solutions. Specializing in AWS, Python, Kubernetes, Infrastructure as Code, and CI/CD.<br />
+                  As an <span className="text-blue-400 font-semibold">AWS Cloud Captain</span>, I lead cloud communities and empower others to grow in cloud technologies.
               </p>
             </div>
             
@@ -134,13 +181,12 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-4 h-auto font-semibold" 
+                className="text-lg px-8 py-4 h-auto font-semibold bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105" 
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
-
             </div>
             
 
