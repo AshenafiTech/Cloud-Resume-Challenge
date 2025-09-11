@@ -56,25 +56,25 @@ const CertificatesSection = () => {
   ];
 
   return (
-    <section id="certificates" className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+    <section id="certificates" className="section-padding bg-muted/30">
+      <div className="container mx-auto container-padding">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="mb-4">
+          <div className="text-center space-y-6 mb-16">
+            <Badge variant="secondary" className="text-sm">
               <Award className="w-4 h-4 mr-2" />
-              Certifications
+              Professional Certifications
             </Badge>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Professional <span className="gradient-text">Certifications</span> & Achievements
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+              Validated <span className="gradient-text">Cloud Expertise</span> & Achievements
             </h2>
-            <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Demonstrating expertise across cloud platforms, DevOps tools, and modern technologies 
               through industry-recognized certifications and continuous learning.
             </p>
           </div>
           {/* Certificates Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {certificates.map((cert, index) => {
               const logo = (
                 <div className="w-40 h-40 bg-white rounded-lg shadow-md flex items-center justify-center overflow-hidden">
@@ -135,14 +135,14 @@ const CertificatesSection = () => {
               if (cert.url && cert.url !== "#") {
                 return (
                   <a key={index} href={cert.url} target="_blank" rel="noopener noreferrer" className="block">
-                    <Card className="group glass-effect subtle-shadow hover:scale-105 transition-all duration-300 cursor-pointer border-0">
+                    <Card className="group glass-effect border-0 hover:scale-105 transition-all duration-300 cursor-pointer medium-shadow hover:large-shadow">
                       {cardContent}
                     </Card>
                   </a>
                 );
               } else {
                 return (
-                  <Card key={index} className="group border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+                  <Card key={index} className="group glass-effect border-0 hover:scale-105 transition-all duration-300 cursor-pointer medium-shadow hover:large-shadow">
                     {cardContent}
                   </Card>
                 );
