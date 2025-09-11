@@ -114,8 +114,7 @@ const HeroSection = () => {
             {/* Professional description */}
             <div className="mb-10 max-w-2xl">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I help teams and organizations build scalable backend and cloud solutions. 
-                Specializing in AWS, Python, Kubernetes, Infrastructure as Code, and CI/CD.
+                I help teams and organizations design and build scalable backend and cloud solutions. I specialize in AWS, Python, Kubernetes, Infrastructure as Code, and CI/CD, with a strong foundation in machine learning, cloud architecture, and software engineering.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
                 As an <span className="text-primary font-semibold">AWS Cloud Captain</span>, I lead cloud 
