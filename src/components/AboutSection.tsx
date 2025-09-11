@@ -7,7 +7,7 @@ const AboutSection = () => {
     {
       icon: <Users className="h-6 w-6" />,
       title: "Mentor & Content Creator",
-      description: "I mentor students through cloud clubs and ALX programs, sharing knowledge through blogs and YouTube videos to help others grow in technology."
+  description: "I have mentored students through cloud clubs and the ALX Cloud Computing Program, sharing knowledge through blogs and YouTube videos to help others grow in technology."
     },
     {
       icon: <Cloud className="h-6 w-6" />,
