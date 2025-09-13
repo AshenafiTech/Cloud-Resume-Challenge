@@ -39,7 +39,7 @@ const HeroSection = () => {
           <ChevronDown className="w-6 h-6 text-foreground/60 relative z-10 hover:text-primary transition-colors duration-300" />
         </div>
       </div>
-      <div className="container mx-auto container-padding relative z-10">
+      <div className="container mx-auto container-padding relative z-10" style={{ marginTop: '-50px' }}>
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center lg:items-start">
           {/* Sidebar - Mobile-first responsive design */}
           <aside className="w-full lg:w-1/3 flex flex-col items-center lg:items-start">
