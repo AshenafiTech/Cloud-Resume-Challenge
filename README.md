@@ -6,7 +6,7 @@
 
 This is my implementation of the [Cloud Resume Challenge](https://cloudresumechallenge.dev/) - a hands-on project that demonstrates cloud skills by building a resume website using AWS services. The challenge combines frontend development, cloud infrastructure, APIs, databases, and DevOps practices.
 
-## 🏗️ Architecture
+## Architecture
 
 **Frontend (Static Website)**
 - React 18 + TypeScript + Tailwind CSS
