@@ -4,7 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import CertificatesSection from "@/components/CertificatesSection";
 import BlogsSection from "@/components/BlogsSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+// import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactForm from "@/components/ContactForm";
 import BackToTop from "@/components/BackToTop";
 import Footer from "@/components/Footer";
@@ -29,9 +29,11 @@ const Index = () => {
         <section id="blogs" className="scroll-mt-20">
           <BlogsSection />
         </section>
+        {/*
         <section id="testimonials" className="scroll-mt-20">
           <TestimonialsSection />
         </section>
+        */}
         <section id="contact" className="scroll-mt-20">
           <ContactForm />
         </section>

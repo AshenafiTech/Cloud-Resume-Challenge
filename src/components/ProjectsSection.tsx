@@ -43,48 +43,68 @@ const ProjectsSection = () => {
 
           {/* Featured Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* Project Card 1 */}
+            {/* Project Card 1: Credit Risk Model */}
             <Card className="glass-effect border-0 group hover:scale-105 transition-all duration-300 overflow-hidden">
               <CardContent className="p-0">
-                <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center relative">
-                  <div className="text-4xl z-10">🤖</div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+                <div className="w-full h-48 relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center" 
+                    alt="Credit Risk Analytics Dashboard" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-4 left-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">ML MODEL</div>
+                  <div className="absolute bottom-4 right-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">RISK ANALYSIS</div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    AI Chatbot Platform
+                    Credit Risk Model
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    A scalable chatbot platform for customer support, powered by natural language processing and machine learning.
+                    Advanced credit scoring solution for Bati Bank's buy-now-pay-later service. Transforms customer behavioral data into predictive risk signals using RFM analysis, supports regulatory compliance (Basel II), and balances model interpretability with performance. Features FastAPI ML service, MLflow MLOps, Docker deployment, and CI/CD automation.
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     <Badge variant="outline" className="text-xs">Python</Badge>
-                    <Badge variant="outline" className="text-xs">NLP</Badge>
-                    <Badge variant="outline" className="text-xs">AWS</Badge>
+                    <Badge variant="outline" className="text-xs">FastAPI</Badge>
+                    <Badge variant="outline" className="text-xs">MLflow</Badge>
+                    <Badge variant="outline" className="text-xs">Docker</Badge>
                   </div>
+                  <a href="https://github.com/AshenafiTech/credit-risk-model" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:underline text-sm font-medium">
+                    View on GitHub <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Project Card 2 */}
+            {/* Project Card 2: Customer Experience Analytics */}
             <Card className="glass-effect border-0 group hover:scale-105 transition-all duration-300 overflow-hidden">
               <CardContent className="p-0">
-                <div className="w-full h-48 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 flex items-center justify-center relative">
-                  <div className="text-4xl z-10">☁️</div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent"></div>
+                <div className="w-full h-48 relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center" 
+                    alt="Customer Experience Analytics Dashboard" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-4 left-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">ANALYTICS</div>
+                  <div className="absolute bottom-4 right-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">FINTECH</div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    Cloud Automation Toolkit
+                    Customer Experience Analytics
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Automate cloud infrastructure provisioning and management with a suite of open source tools.
+                    Comprehensive analytics platform for fintech applications. Tracks user behavior, engagement metrics, and customer journey optimization using advanced data processing and visualization techniques.
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline" className="text-xs">Terraform</Badge>
-                    <Badge variant="outline" className="text-xs">AWS</Badge>
-                    <Badge variant="outline" className="text-xs">Docker</Badge>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <Badge variant="outline" className="text-xs">Python</Badge>
+                    <Badge variant="outline" className="text-xs">Pandas</Badge>
+                    <Badge variant="outline" className="text-xs">Plotly</Badge>
+                    <Badge variant="outline" className="text-xs">Streamlit</Badge>
                   </div>
+                  <a href="https://github.com/AshenafiTech/Customer-Experience-Analytics-for-Fintech-Apps" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:underline text-sm font-medium">
+                    View on GitHub <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -92,22 +112,98 @@ const ProjectsSection = () => {
             {/* Project Card 3 */}
             <Card className="glass-effect border-0 group hover:scale-105 transition-all duration-300 overflow-hidden">
               <CardContent className="p-0">
-                <div className="w-full h-48 bg-gradient-to-br from-orange-500/20 to-orange-500/10 flex items-center justify-center relative">
-                  <div className="text-4xl z-10">📊</div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent"></div>
+                <div className="w-full h-48 relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=200&fit=crop&crop=center" 
+                    alt="Insurance Analytics Dashboard" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-4 left-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">INSURANCE</div>
+                  <div className="absolute bottom-4 right-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">ANALYTICS</div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    DevOps Dashboard
+                    End-to-End Insurance Analytics
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Monitor CI/CD pipelines, cloud resources, and system health in one unified dashboard.
+                    Analyzes historical car insurance claim data for AlphaCare Insurance Solutions (ACIS) to optimize marketing strategies and identify low-risk clients. Includes EDA, predictive modeling, and actionable insights for insurance business optimization.
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline" className="text-xs">React</Badge>
-                    <Badge variant="outline" className="text-xs">Node.js</Badge>
-                    <Badge variant="outline" className="text-xs">K8s</Badge>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <Badge variant="outline" className="text-xs">Python</Badge>
+                    <Badge variant="outline" className="text-xs">Jupyter</Badge>
+                    <Badge variant="outline" className="text-xs">DVC</Badge>
+                    <Badge variant="outline" className="text-xs">CI/CD</Badge>
                   </div>
+                  <a href="https://github.com/AshenafiTech/end-to-end-insurance-analytics" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:underline text-sm font-medium">
+                    View on GitHub <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+            {/* Project Card 4: Online Poll System */}
+            <Card className="glass-effect border-0 group hover:scale-105 transition-all duration-300 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="w-full h-48 relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=200&fit=crop&crop=center" 
+                    alt="Online Voting and Poll System" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-4 left-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">VOTING</div>
+                  <div className="absolute bottom-4 right-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">REAL-TIME</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                    Online Poll System
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Scalable backend API and web app for creating and managing online polls with real-time voting, secure authentication, and instant results. Features include poll management, analytics, guest and authenticated voting, optimized PostgreSQL database, and interactive API docs. Built for organizations, events, and communities needing robust decision-making tools.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <Badge variant="outline" className="text-xs">Python</Badge>
+                    <Badge variant="outline" className="text-xs">Django REST Framework</Badge>
+                    <Badge variant="outline" className="text-xs">PostgreSQL</Badge>
+                    <Badge variant="outline" className="text-xs">Docker</Badge>
+                    <Badge variant="outline" className="text-xs">Swagger</Badge>
+                  </div>
+                  <a href="https://github.com/AshenafiTech/Online-Poll-System" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:underline text-sm font-medium">
+                    View on GitHub <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+            {/* Project Card 5: ALX Backend Python */}
+            <Card className="glass-effect border-0 group hover:scale-105 transition-all duration-300 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="w-full h-48 relative overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=200&fit=crop&crop=center" 
+                    alt="Python Backend Development" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-4 left-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">PYTHON</div>
+                  <div className="absolute bottom-4 right-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">BACKEND</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                    ALX Backend Python
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    A curated collection of backend engineering projects and exercises built with Python, following the ALX curriculum. Covers RESTful APIs, database design, caching, authentication, and scalable microservices. Includes automated tests, CI/CD, and deployment scripts for real-world readiness.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <Badge variant="outline" className="text-xs">Python</Badge>
+                    <Badge variant="outline" className="text-xs">Flask</Badge>
+                    <Badge variant="outline" className="text-xs">SQL</Badge>
+                    <Badge variant="outline" className="text-xs">Redis</Badge>
+                    <Badge variant="outline" className="text-xs">CI/CD</Badge>
+                  </div>
+                  <a href="https://github.com/AshenafiTech/alx-backend-python" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:underline text-sm font-medium">
+                    View on GitHub <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -115,10 +211,12 @@ const ProjectsSection = () => {
 
           {/* CTA */}
           <div className="text-center">
-            <Button size="lg" className="group medium-shadow hover:large-shadow transition-all duration-300">
-              View All Projects
-              <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <a href="https://github.com/AshenafiTech" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="group medium-shadow hover:large-shadow transition-all duration-300">
+                View All Projects
+                <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>

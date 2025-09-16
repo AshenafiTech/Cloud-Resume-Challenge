@@ -16,7 +16,7 @@ Parameters:
 Globals:
   Function:
     Timeout: 10
-    Runtime: python3.9
+    Runtime: python3.12
     Environment:
       Variables:
         CORS_ORIGIN: !Sub "https://${DomainName}"
@@ -40,7 +40,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Sub "${Environment}-visitor-count"
-      CodeUri: backend/
+      CodeUri: ../backend/
       Handler: app.lambda_handler
       Environment:
         Variables:

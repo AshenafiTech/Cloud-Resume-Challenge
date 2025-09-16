@@ -3,10 +3,9 @@ import boto3
 import os
 from decimal import Decimal
 
-dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table(os.environ['TABLE_NAME'])
-
 def lambda_handler(event, context):
+    dynamodb = boto3.resource('dynamodb')
+    table = dynamodb.Table(os.environ['TABLE_NAME'])
     try:
         # Get current count
         response = table.get_item(Key={'id': 'visitor-count'})

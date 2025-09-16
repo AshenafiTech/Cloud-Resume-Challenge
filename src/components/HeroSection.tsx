@@ -12,7 +12,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
+  <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden pt-16 md:pt-0">
       {/* Modern minimal background */}
       <div className="absolute inset-0">
         {/* Subtle grid background */}
