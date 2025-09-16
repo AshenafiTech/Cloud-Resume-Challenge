@@ -35,9 +35,9 @@ const CertificatesSection = () => {
     {
       name: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-  year: "May 2025",
+      year: "May 2025",
       logo: ccpImage,
-  url: "https://www.credly.com/badges/0d2117ef-f462-463a-bdbf-2b8b900387c3"
+      url: "https://www.credly.com/badges/f9bf2795-60df-40e6-85f4-d94a48d43c35"
     },
     {
       name: "AWS Cloud Captain",
