@@ -5,11 +5,6 @@ import { Users, Cloud, Mic, Heart } from "lucide-react";
 const AboutSection = () => {
   const highlights = [
     {
-      icon: <Users className="h-6 w-6" />,
-      title: "Mentor & Content Creator",
-  description: "I have mentored students through cloud clubs and the ALX Cloud Computing Program, sharing knowledge through blogs and YouTube videos to help others grow in technology."
-    },
-    {
       icon: <Cloud className="h-6 w-6" />,
       title: "Cloud & Backend Developer", 
       description: "I partner with companies to build robust, scalable backend and cloud solutions using modern technologies and best practices."
@@ -18,6 +13,11 @@ const AboutSection = () => {
       icon: <Mic className="h-6 w-6" />,
       title: "Community Leader & Speaker",
       description: "Active in developer communities, I speak at tech events and lead initiatives that bring developers together to learn and grow."
+    },
+    {
+      icon: <Users className="h-6 w-6" />,
+      title: "Mentor & Content Creator",
+      description: "I have mentored students through cloud clubs and the ALX Cloud Computing Program, sharing knowledge through blogs and YouTube videos to help others grow in technology."
     },
     {
       icon: <Heart className="h-6 w-6" />,
