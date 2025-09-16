@@ -32,7 +32,7 @@ const ProjectsSection = () => {
               Featured Projects
             </Badge>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-              Building <span className="gradient-text">innovative solutions</span> for the future
+              building <span className="gradient-text">innovative solutions</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Explore my collection of projects spanning AI, DevOps, and modern development. 
