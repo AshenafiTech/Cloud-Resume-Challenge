@@ -66,7 +66,7 @@ const Footer = () => {
               <p className="text-muted-foreground">
                 © {currentYear} Ashenafi Godana. Built with ❤️ using React & Tailwind CSS.
               </p>
-              <VisitorCounter />
+              {/* <VisitorCounter /> */}
             </div>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">

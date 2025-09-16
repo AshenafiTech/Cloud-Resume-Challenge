@@ -192,13 +192,13 @@ const ProjectsSection = () => {
                     ALX Backend Python
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    A curated collection of backend engineering projects and exercises built with Python, following the ALX curriculum. Covers RESTful APIs, database design, caching, authentication, and scalable microservices. Includes automated tests, CI/CD, and deployment scripts for real-world readiness.
+                    A comprehensive collection of backend Python projects and exercises from the ALX curriculum. Includes Django web apps, custom middleware, REST APIs, unit and integration testing, decorators, generator-based data processing, and messaging microservices. Features Docker, CI/CD, and best practices for scalable backend engineering.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Badge variant="outline" className="text-xs">Python</Badge>
-                    <Badge variant="outline" className="text-xs">Flask</Badge>
-                    <Badge variant="outline" className="text-xs">SQL</Badge>
-                    <Badge variant="outline" className="text-xs">Redis</Badge>
+                    <Badge variant="outline" className="text-xs">Django</Badge>
+                    <Badge variant="outline" className="text-xs">Unittest</Badge>
+                    <Badge variant="outline" className="text-xs">Docker</Badge>
                     <Badge variant="outline" className="text-xs">CI/CD</Badge>
                   </div>
                   <a href="https://github.com/AshenafiTech/alx-backend-python" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:underline text-sm font-medium">
