@@ -29,7 +29,14 @@ const Header = () => {
       <div className="container mx-auto container-padding">
         <div className="max-w-7xl mx-auto flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold gradient-text">Ashenafi</h1>
+            <button
+              onClick={() => scrollToSection("hero")}
+              aria-label="Go to Hero Section"
+              className="focus:outline-none bg-transparent border-none p-0 cursor-pointer"
+              style={{ lineHeight: 1 }}
+            >
+              <span className="text-xl font-bold gradient-text transition duration-200 hover:brightness-125">Ashenafi</span>
+            </button>
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

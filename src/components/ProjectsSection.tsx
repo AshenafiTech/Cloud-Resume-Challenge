@@ -43,33 +43,34 @@ const ProjectsSection = () => {
 
           {/* Featured Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* Project Card 1: Credit Risk Model */}
+            {/* Project Card 1: Intelligent Compliant Analysis for Financial Services */}
             <Card className="glass-effect border-0 group hover:scale-105 transition-all duration-300 overflow-hidden">
               <CardContent className="p-0">
                 <div className="w-full h-48 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center" 
-                    alt="Credit Risk Analytics Dashboard" 
+                    src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80" 
+                    alt="Financial compliance documents and analysis" 
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute top-4 left-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">ML MODEL</div>
-                  <div className="absolute bottom-4 right-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">RISK ANALYSIS</div>
+                  <div className="absolute top-4 left-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">NLP</div>
+                  <div className="absolute bottom-4 right-4 text-xs font-mono text-white bg-black/50 px-2 py-1 rounded">COMPLIANCE</div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    Credit Risk Model
+                    Intelligent Compliance Analysis for Financial Services
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Advanced credit scoring solution for Bati Bank's buy-now-pay-later service. Transforms customer behavioral data into predictive risk signals using RFM analysis, supports regulatory compliance (Basel II), and balances model interpretability with performance. Features FastAPI ML service, MLflow MLOps, Docker deployment, and CI/CD automation.
+                    Developed an NLP-powered platform to automate compliance document analysis for financial services. Utilizes advanced language models to extract, classify, and summarize regulatory requirements, streamlining compliance workflows and reducing manual review time. Features Python, spaCy, Transformers, Streamlit, and Docker for scalable deployment.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Badge variant="outline" className="text-xs">Python</Badge>
-                    <Badge variant="outline" className="text-xs">FastAPI</Badge>
-                    <Badge variant="outline" className="text-xs">MLflow</Badge>
+                    <Badge variant="outline" className="text-xs">spaCy</Badge>
+                    <Badge variant="outline" className="text-xs">Transformers</Badge>
+                    <Badge variant="outline" className="text-xs">Streamlit</Badge>
                     <Badge variant="outline" className="text-xs">Docker</Badge>
                   </div>
-                  <a href="https://github.com/AshenafiTech/credit-risk-model" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:underline text-sm font-medium">
+                  <a href="https://github.com/AshenafiTech/Intelligent-Compliant-analysis-for-financial-services" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:underline text-sm font-medium">
                     View on GitHub <ExternalLink className="ml-1 h-4 w-4" />
                   </a>
                 </div>
@@ -114,8 +115,8 @@ const ProjectsSection = () => {
               <CardContent className="p-0">
                 <div className="w-full h-48 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=200&fit=crop&crop=center" 
-                    alt="Insurance Analytics Dashboard" 
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" 
+                    alt="Insurance analytics dashboard with data charts" 
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -146,8 +147,8 @@ const ProjectsSection = () => {
               <CardContent className="p-0">
                 <div className="w-full h-48 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=200&fit=crop&crop=center" 
-                    alt="Online Voting and Poll System" 
+                    src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=400&q=80" 
+                    alt="Digital polling and survey system interface" 
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
