@@ -108,17 +108,16 @@ const HeroSection = () => {
             
             {/* Professional subtitle */}
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-muted-foreground mb-8 leading-relaxed">
-              Backend Developer & Cloud Engineer
+              Data & Backend Engineer with Cloud Expertise
             </h2>
             
             {/* Professional description */}
             <div className="mb-10 max-w-2xl">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I help teams and organizations design and build scalable backend and cloud solutions. I specialize in AWS, Python, Kubernetes, Infrastructure as Code, and CI/CD, with a strong foundation in machine learning, cloud architecture, and software engineering.
+                I design and build robust data pipelines, backend APIs, and cloud-native solutions—empowering organizations to unlock insights and scale with confidence. My expertise spans AWS, Python, analytics, DevOps, and infrastructure automation.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                As an <span className="text-primary font-semibold">AWS Cloud Captain</span>, I lead cloud 
-                communities and empower others to grow in cloud technologies.
+                Through open source projects and in-depth technical blogs, I share practical knowledge on data engineering, backend development, and cloud best practices. As an <span className="text-primary font-semibold">AWS Cloud Captain</span>, I mentor and inspire the next generation of cloud engineers.
               </p>
             </div>
             
