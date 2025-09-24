@@ -58,7 +58,15 @@ const ProjectsSection = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    Intelligent Compliance Analysis for Financial Services
+                    <a
+                      href="https://github.com/AshenafiTech/Intelligent-Compliant-analysis-for-financial-services"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline focus:outline-none focus:ring-2 focus:ring-primary"
+                      aria-label="View Intelligent Compliance Analysis for Financial Services on GitHub"
+                    >
+                      Intelligent Compliance Analysis for Financial Services
+                    </a>
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     Developed an NLP-powered platform to automate compliance document analysis for financial services. Utilizes advanced language models to extract, classify, and summarize regulatory requirements, streamlining compliance workflows and reducing manual review time. Features Python, spaCy, Transformers, Streamlit, and Docker for scalable deployment.
@@ -92,7 +100,15 @@ const ProjectsSection = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    Customer Experience Analytics
+                    <a
+                      href="https://github.com/AshenafiTech/Customer-Experience-Analytics-for-Fintech-Apps"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline focus:outline-none focus:ring-2 focus:ring-primary"
+                      aria-label="View Customer Experience Analytics on GitHub"
+                    >
+                      Customer Experience Analytics
+                    </a>
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     Comprehensive analytics platform for fintech applications. Tracks user behavior, engagement metrics, and customer journey optimization using advanced data processing and visualization techniques.
@@ -125,7 +141,15 @@ const ProjectsSection = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    End-to-End Insurance Analytics
+                    <a
+                      href="https://github.com/AshenafiTech/end-to-end-insurance-analytics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline focus:outline-none focus:ring-2 focus:ring-primary"
+                      aria-label="View End-to-End Insurance Analytics on GitHub"
+                    >
+                      End-to-End Insurance Analytics
+                    </a>
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     Analyzes historical car insurance claim data for AlphaCare Insurance Solutions (ACIS) to optimize marketing strategies and identify low-risk clients. Includes EDA, predictive modeling, and actionable insights for insurance business optimization.
@@ -157,7 +181,15 @@ const ProjectsSection = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    Online Poll System
+                    <a
+                      href="https://github.com/AshenafiTech/Online-Poll-System"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline focus:outline-none focus:ring-2 focus:ring-primary"
+                      aria-label="View Online Poll System on GitHub"
+                    >
+                      Online Poll System
+                    </a>
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     Scalable backend API and web app for creating and managing online polls with real-time voting, secure authentication, and instant results. Features include poll management, analytics, guest and authenticated voting, optimized PostgreSQL database, and interactive API docs. Built for organizations, events, and communities needing robust decision-making tools.
@@ -190,7 +222,15 @@ const ProjectsSection = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    ALX Backend Python
+                    <a
+                      href="https://github.com/AshenafiTech/alx-backend-python"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline focus:outline-none focus:ring-2 focus:ring-primary"
+                      aria-label="View ALX Backend Python on GitHub"
+                    >
+                      ALX Backend Python
+                    </a>
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     A comprehensive collection of backend Python projects and exercises from the ALX curriculum. Includes Django web apps, custom middleware, REST APIs, unit and integration testing, decorators, generator-based data processing, and messaging microservices. Features Docker, CI/CD, and best practices for scalable backend engineering.
