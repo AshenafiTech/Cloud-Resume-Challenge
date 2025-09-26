@@ -1,45 +1,32 @@
-# Cloud Resume Challenge - Ashenafi Godana
+# Portfolio Website - Ashenafi Godana
 
-> A serverless portfolio website built following the Cloud Resume Challenge requirements
+> A modern, responsive portfolio website built with React and TypeScript
 
-## ☁️ About This Project
+## 🚀 About This Project
 
-This is my implementation of the [Cloud Resume Challenge](https://cloudresumechallenge.dev/) - a hands-on project that demonstrates cloud skills by building a resume website using AWS services. The challenge combines frontend development, cloud infrastructure, APIs, databases, and DevOps practices.
+This is my personal portfolio website showcasing my work as a Data & Backend Engineer with Cloud Expertise. Built with modern web technologies, it features a clean, professional design that highlights my projects, certifications, and technical blog posts.
 
-## Architecture
+## 🛠️ Tech Stack
 
-**Frontend (Static Website)**
-- React 18 + TypeScript + Tailwind CSS
-- Hosted on S3 with CloudFront CDN
-- HTTPS via ACM Certificate
-- Custom domain with Route 53
-
-**Backend (Serverless API)**
-- Python Lambda function for visitor counter
-- API Gateway for REST endpoints
-- DynamoDB for data persistence
-- CORS enabled for cross-origin requests
-
-**Infrastructure & DevOps**
-- AWS SAM for Infrastructure as Code
-- GitHub Actions for CI/CD pipeline
-- pytest for unit testing
-- Automated deployment and testing
+**Frontend**
+- React 18 + TypeScript
+- Tailwind CSS for styling
+- Vite for build tooling
+- Lucide React for icons
+- Responsive design
 
 ## 📁 Project Structure
 
 ```
-├── src/                    # Frontend React application
+├── src/                    # React application source
 │   ├── components/         # React components
 │   ├── hooks/             # Custom React hooks
+│   ├── pages/             # Page components
 │   ├── types/             # TypeScript type definitions
-│   └── assets/            # Static assets
-├── backend/               # Lambda function code
-├── infrastructure/        # AWS SAM templates
-├── scripts/              # Deployment and utility scripts
-├── tests/                # Unit tests
-├── docs/                 # Documentation
-└── .github/workflows/    # CI/CD pipelines
+│   ├── assets/            # Static assets (images, etc.)
+│   └── lib/               # Utility functions
+├── public/               # Static public assets
+└── dist/                 # Production build output
 ```
 
 ## 🏃♂️ Quick Start
@@ -52,14 +39,16 @@ npm install
 # Start development server
 npm run dev
 
-# Start local API (requires SAM CLI)
-./scripts/local-dev.sh
+# Open http://localhost:5173 in your browser
 ```
 
-### Cloud Deployment
+### Production Build
 ```bash
-# Deploy to AWS (requires AWS CLI + SAM CLI)
-./scripts/deploy.sh your-domain.com
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
 ## 📦 Available Scripts
@@ -69,71 +58,49 @@ npm run dev      # Start development server
 npm run build    # Build for production
 npm run preview  # Preview production build
 npm run lint     # Run ESLint
-
-# Custom scripts
-./scripts/deploy.sh        # Deploy to AWS
-./scripts/local-dev.sh     # Local development with API
 ```
 
-## 🎯 Cloud Resume Challenge Requirements
+## ✨ Features
 
-| Requirement | Implementation | Status |
-|-------------|----------------|--------|
-| **Certification** | AWS Certified Cloud Practitioner & Solutions Architect | ✅ |
-| **HTML/CSS/JS** | React TypeScript application | ✅ |
-| **Static Website** | S3 bucket with static website hosting | ✅ |
-| **HTTPS** | CloudFront distribution with ACM certificate | ✅ |
-| **DNS** | Route 53 hosted zone and domain | ✅ |
-| **Database** | DynamoDB table for visitor counter | ✅ |
-| **API** | API Gateway + Lambda function | ✅ |
-| **Python** | Lambda function written in Python | ✅ |
-| **Tests** | Unit tests with pytest and moto | ✅ |
-| **Infrastructure as Code** | AWS SAM (CloudFormation) | ✅ |
-| **Source Control** | Git repository on GitHub | ✅ |
-| **CI/CD** | GitHub Actions workflow | ✅ |
+- **Modern Design**: Clean, professional interface with smooth animations
+- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
+- **TypeScript**: Full type safety and better developer experience
+- **Performance**: Fast loading with optimized assets and code splitting
+- **Accessibility**: WCAG compliant with proper semantic HTML
+- **SEO Optimized**: Meta tags and structured data for better search visibility
 
-## 🚀 Key Features
+## 🎨 Design Highlights
 
-**Visitor Counter**
-- Real-time visitor tracking using DynamoDB
-- Serverless API with Lambda and API Gateway
-- CORS-enabled for secure cross-origin requests
+**User Experience**
+- Smooth scrolling navigation
+- Interactive hover effects
+- Loading animations and transitions
+- Dark/light theme support
 
-**Performance & Security**
-- Global CDN with CloudFront
-- SSL/TLS encryption
-- Optimized static asset delivery
+**Content Sections**
+- Professional hero section with contact links
+- Project showcase with live demos
+- Certification and skills display
+- Technical blog integration
+- Contact form with validation
 
-**DevOps Best Practices**
-- Automated testing and deployment
-- Infrastructure as Code
-- Environment-specific configurations
+## 🛠️ Development
 
-## 💰 Cost Analysis
-
-**Monthly AWS Costs (estimated)**
-- S3 Static Hosting: ~$0.50
-- CloudFront CDN: Free tier covers most traffic
-- Lambda Functions: Free tier (1M requests/month)
-- DynamoDB: Free tier (25GB storage)
-- Route 53: $0.50/hosted zone
-- **Total: ~$1-5/month**
-
-## 📚 Documentation
-
-- [Complete Deployment Guide](docs/DEPLOYMENT.md)
-- [Architecture Deep Dive](docs/ARCHITECTURE.md)
-- [API Documentation](backend/README.md)
+**Built With**
+- Vite for fast development and building
+- ESLint for code quality
+- Tailwind CSS for utility-first styling
+- Component-based architecture
+- Custom hooks for state management
 
 ## 🎓 Skills Demonstrated
 
-- **Cloud Architecture**: Serverless design patterns
-- **Infrastructure as Code**: AWS SAM/CloudFormation
-- **DevOps**: CI/CD pipelines, automated testing
 - **Frontend Development**: Modern React with TypeScript
-- **Backend Development**: Python Lambda functions
-- **Database Design**: NoSQL with DynamoDB
-- **Security**: HTTPS, CORS, IAM policies
+- **UI/UX Design**: Responsive design with Tailwind CSS
+- **Performance Optimization**: Code splitting and asset optimization
+- **Accessibility**: WCAG compliance and semantic HTML
+- **Version Control**: Git workflow and best practices
+- **Build Tools**: Vite configuration and optimization
 
 ## 📧 Connect
 
@@ -144,4 +111,4 @@ npm run lint     # Run ESLint
 
 ---
 
-*Cloud Resume Challenge Implementation by Ashenafi Godana*
+*Portfolio Website by Ashenafi Godana*

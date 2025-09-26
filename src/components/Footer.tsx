@@ -1,5 +1,4 @@
 import { Github, Linkedin, Twitter, Youtube, Mail } from "lucide-react";
-import { VisitorCounter } from "./VisitorCounter";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
