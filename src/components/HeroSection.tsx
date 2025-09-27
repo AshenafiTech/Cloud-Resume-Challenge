@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ChevronDown, ArrowRight, Github, Linkedin, Twitter, Youtube, Download, MapPin, Calendar, Award, Mail } from "lucide-react";
+import CVViewer from "./CVViewer";
+import { ChevronDown, ArrowRight, Github, Linkedin, Twitter, Youtube, Download, MapPin, Calendar, Award, Mail, Eye } from "lucide-react";
 import profileImage from "@/assets/profile-image.jpg";
 import { useEffect, useState } from "react";
 
@@ -123,14 +124,15 @@ const HeroSection = () => {
             
             {/* Professional CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="group medium-shadow hover:large-shadow transition-all duration-300 hover:scale-105"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                View My Work
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+              <CVViewer>
+                <Button 
+                  size="lg" 
+                  className="group medium-shadow hover:large-shadow transition-all duration-300 hover:scale-105"
+                >
+                  <Eye className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                  View Resume
+                </Button>
+              </CVViewer>
               <Button 
                 variant="outline" 
                 size="lg" 
