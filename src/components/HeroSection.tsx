@@ -135,9 +135,12 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg" 
                 className="group hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                asChild
               >
-                Get in Touch
+                <a href="/assets/ashenafi-CV.pdf" download="Ashenafi-Godana-CV.pdf">
+                  <Download className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                  Download CV
+                </a>
               </Button>
             </div>
           </main>
