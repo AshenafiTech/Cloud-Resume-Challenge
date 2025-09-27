@@ -55,7 +55,32 @@ const CVViewer = ({ children }: CVViewerProps) => {
               </div>
               <div className="flex items-center gap-1">
                 <Globe className="w-4 h-4" />
-                LinkedIn | GitHub | Portfolio
+                <a
+                  href="https://www.linkedin.com/in/ashenafig/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline hover:text-primary/80 transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <span className="mx-1">|</span>
+                <a
+                  href="https://github.com/AshenafiTech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline hover:text-primary/80 transition-colors"
+                >
+                  GitHub
+                </a>
+                <span className="mx-1">|</span>
+                <a
+                  href="https://ashenafigodana.com"  
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline hover:text-primary/80 transition-colors"
+                >
+                  Portfolio
+                </a>
               </div>
             </div>
           </div>

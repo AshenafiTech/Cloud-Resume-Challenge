@@ -47,7 +47,7 @@ const Header = () => {
             <button onClick={() => scrollToSection("blogs")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Blog</button>
             <CVViewer>
               <Button size="sm" className="medium-shadow hover:large-shadow transition-all duration-300">
-                View Resume
+                Resume
               </Button>
             </CVViewer>
             <ThemeToggle />
@@ -103,7 +103,7 @@ const Header = () => {
                          size="sm" 
                          className="w-full"
                        >
-                         View Resume
+                        Resume
                        </Button>
                      </CVViewer>
                    </div>
