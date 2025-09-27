@@ -28,7 +28,7 @@ const CVViewer = ({ children }: CVViewerProps) => {
       </DialogTrigger>
       <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
         <DialogHeader className="flex flex-row items-center justify-between space-y-0 pb-4 border-b">
-          <DialogTitle className="text-xl font-semibold">Resume - Ashenafi Godana</DialogTitle>
+          <DialogTitle className="text-xl font-semibold">Resume - Ashenafi Godana Kumbi</DialogTitle>
           <Button
             variant="outline"
             size="sm"
@@ -43,7 +43,7 @@ const CVViewer = ({ children }: CVViewerProps) => {
         <div className="flex-1 overflow-auto space-y-6 py-4">
           {/* Header */}
           <div className="text-center space-y-4">
-            <h1 className="text-3xl font-bold">Ashenafi Kumbi</h1>
+            <h1 className="text-3xl font-bold">Ashenafi Godana Kumbi</h1>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
                 <Phone className="w-4 h-4" />

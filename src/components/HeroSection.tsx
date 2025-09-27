@@ -51,7 +51,7 @@ const HeroSection = () => {
                 <div className="w-32 h-32 lg:w-36 lg:h-36 rounded-full overflow-hidden border-4 border-primary/20 medium-shadow hover:scale-105 transition-all duration-500 relative">
                   <img
                     src={profileImage}
-                    alt="Ashenafi Godana - Backend Developer & Cloud Engineer"
+                    alt="Ashenafi Godana Kumbi - Backend Developer & Cloud Engineer"
                     className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-500"
                   />
                 </div>
@@ -103,8 +103,8 @@ const HeroSection = () => {
             </div>
             
             {/* Hero title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight tracking-tight">
-              <span className="gradient-text">Ashenafi Godana</span>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight tracking-tight">
+              <span className="gradient-text">Ashenafi Godana Kumbi</span>
             </h1>
             
             {/* Professional subtitle */}
