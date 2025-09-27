@@ -44,7 +44,9 @@ const Header = () => {
             <button onClick={() => scrollToSection("projects")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</button>
             <button onClick={() => scrollToSection("certificates")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Certifications</button>
             <button onClick={() => scrollToSection("blogs")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Blog</button>
-            <Button size="sm" className="medium-shadow hover:large-shadow transition-all duration-300" onClick={() => scrollToSection("contact")}>Get in Touch</Button>
+            <Button size="sm" className="medium-shadow hover:large-shadow transition-all duration-300" asChild>
+              <a href="/assets/ashenafi-CV.pdf" download="Ashenafi-Godana-CV.pdf">Resume</a>
+            </Button>
             <ThemeToggle />
           </nav>
           {/* Mobile Navigation */}
@@ -92,15 +94,15 @@ const Header = () => {
                   >
                     Blog
                   </button>
-                  <div className="px-6 py-3">
-                    <Button 
-                      size="sm" 
-                      className="w-full" 
-                      onClick={() => {scrollToSection("contact"); setMenuOpen(false);}}
-                    >
-                      Get in Touch
-                    </Button>
-                  </div>
+                   <div className="px-6 py-3">
+                     <Button 
+                       size="sm" 
+                       className="w-full"
+                       asChild
+                     >
+                       <a href="/assets/ashenafi-CV.pdf" download="Ashenafi-Godana-CV.pdf">Resume</a>
+                     </Button>
+                   </div>
                 </nav>
               </div>
             </>
