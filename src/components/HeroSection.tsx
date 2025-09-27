@@ -130,7 +130,7 @@ const HeroSection = () => {
               >
                 <a href="/assets/ashenafi-CV.pdf" download="Ashenafi-Godana-CV.pdf">
                   <Download className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                  Download CV
+                  Resume
                 </a>
               </Button>
               <Button 
