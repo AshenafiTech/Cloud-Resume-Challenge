@@ -45,7 +45,7 @@ const Header = () => {
             <button onClick={() => scrollToSection("certificates")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Certifications</button>
             <button onClick={() => scrollToSection("blogs")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Blog</button>
             <Button size="sm" className="medium-shadow hover:large-shadow transition-all duration-300" asChild>
-              <a href="/assets/ashenafi-CV.pdf" download="Ashenafi-Godana-CV.pdf">Resume</a>
+              <a href="/assets/ashenafi-CV.pdf" download="Ashenafi-Godana-CV.pdf">Download CV</a>
             </Button>
             <ThemeToggle />
           </nav>
@@ -100,7 +100,7 @@ const Header = () => {
                        className="w-full"
                        asChild
                      >
-                       <a href="/assets/ashenafi-CV.pdf" download="Ashenafi-Godana-CV.pdf">Resume</a>
+                       <a href="/assets/ashenafi-CV.pdf" download="Ashenafi-Godana-CV.pdf">Download CV</a>
                      </Button>
                    </div>
                 </nav>

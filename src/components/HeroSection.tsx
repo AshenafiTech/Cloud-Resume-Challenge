@@ -126,12 +126,10 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="group medium-shadow hover:large-shadow transition-all duration-300 hover:scale-105"
-                asChild
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <a href="/assets/ashenafi-CV.pdf" download="Ashenafi-Godana-CV.pdf">
-                  <Download className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                  Resume
-                </a>
+                View My Work
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
               <Button 
                 variant="outline" 
