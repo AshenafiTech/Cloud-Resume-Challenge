@@ -182,10 +182,34 @@ const CVViewer = ({ children }: CVViewerProps) => {
           <section className="space-y-4">
             <h2 className="text-xl font-semibold text-primary border-b pb-2">Certifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              <Badge variant="outline">Google Cloud: Professional Machine Learning Engineer</Badge>
-              <Badge variant="outline">SAA-C03: AWS Certified Solutions Architect- Associate</Badge>
-              <Badge variant="outline">CLF-C02: AWS Certified Cloud Practitioner</Badge>
-              <Badge variant="outline">KCNA: Kubernetes and Cloud Native Associate</Badge>
+              <a
+                href="https://cloud.google.com/certification/machine-learning-engineer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge variant="outline">Google Cloud: Professional Machine Learning Engineer</Badge>
+              </a>
+              <a
+                href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge variant="outline">SAA-C03: AWS Certified Solutions Architect- Associate</Badge>
+              </a>
+              <a
+                href="https://aws.amazon.com/certification/certified-cloud-practitioner/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge variant="outline">CLF-C02: AWS Certified Cloud Practitioner</Badge>
+              </a>
+              <a
+                href="https://training.linuxfoundation.org/certification/kubernetes-and-cloud-native-associate-kcna/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge variant="outline">KCNA: Kubernetes and Cloud Native Associate</Badge>
+              </a>
             </div>
           </section>
 
