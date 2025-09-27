@@ -45,11 +45,13 @@ const Header = () => {
             <button onClick={() => scrollToSection("projects")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</button>
             <button onClick={() => scrollToSection("certificates")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Certifications</button>
             <button onClick={() => scrollToSection("blogs")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Blog</button>
-            <CVViewer>
-              <Button size="sm" className="medium-shadow hover:large-shadow transition-all duration-300">
-                Resume
-              </Button>
-            </CVViewer>
+            <Button 
+              size="sm" 
+              className="medium-shadow hover:large-shadow transition-all duration-300"
+              onClick={() => scrollToSection("contact")}
+            >
+              Get in Touch
+            </Button>
             <ThemeToggle />
           </nav>
           {/* Mobile Navigation */}
@@ -98,14 +100,13 @@ const Header = () => {
                     Blog
                   </button>
                    <div className="px-6 py-3">
-                     <CVViewer>
-                       <Button 
-                         size="sm" 
-                         className="w-full"
-                       >
-                        Resume
-                       </Button>
-                     </CVViewer>
+                     <Button 
+                       size="sm" 
+                       className="w-full"
+                       onClick={() => {scrollToSection("contact"); setMenuOpen(false);}}
+                     >
+                       Get in Touch
+                     </Button>
                    </div>
                 </nav>
               </div>

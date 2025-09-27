@@ -124,13 +124,14 @@ const HeroSection = () => {
             
             {/* Professional CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="group medium-shadow hover:large-shadow transition-all duration-300 hover:scale-105"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                View My Work
-              </Button>
+              <CVViewer>
+                <Button 
+                  size="lg" 
+                  className="group medium-shadow hover:large-shadow transition-all duration-300 hover:scale-105"
+                >
+                  View Resume
+                </Button>
+              </CVViewer>
               <Button 
                 variant="outline" 
                 size="lg" 
