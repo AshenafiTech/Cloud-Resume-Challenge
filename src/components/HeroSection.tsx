@@ -59,10 +59,15 @@ const HeroSection = () => {
               
               {/* Status badges */}
               <div className="flex flex-col gap-4 mb-8 w-full items-center lg:items-start">
-                <div className="flex items-center gap-3 px-4 py-2 glass-effect rounded-xl">
-                  <Award className="w-4 h-4 text-primary" />
+                <a 
+                  href="https://www.credly.com/badges/0d2117ef-f462-463a-bdbf-2b8b900387c3" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-2 glass-effect rounded-xl hover:bg-primary/10 transition-colors group cursor-pointer"
+                >
+                  <Award className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium">AWS Cloud Captain</span>
-                </div>
+                </a>
               </div>
               
               <p className="text-muted-foreground text-center lg:text-left mb-8 leading-relaxed max-w-sm">
