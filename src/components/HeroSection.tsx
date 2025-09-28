@@ -63,10 +63,6 @@ const HeroSection = () => {
                   <Award className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium">AWS Cloud Captain</span>
                 </div>
-                <div className="flex items-center gap-3 px-4 py-2 glass-effect rounded-xl">
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium">Available for work</span>
-                </div>
               </div>
               
               <p className="text-muted-foreground text-center lg:text-left mb-8 leading-relaxed max-w-sm">
