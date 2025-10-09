@@ -78,9 +78,9 @@ const HeroSection = () => {
             
             <div className="mb-10 space-y-6">
               <p className="text-lg leading-relaxed max-w-2xl">
-                Digital Art / Editorial Illustration<br />
-                Visual Identity / Digital Assets<br />
-                Environmental Design
+                Cloud Infrastructure / Platform Engineering<br />
+                Data Pipelines / Analytics Systems<br />
+                AI Integration / Machine Learning
               </p>
             </div>
             
