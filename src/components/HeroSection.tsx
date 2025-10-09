@@ -109,9 +109,25 @@ const HeroSection = () => {
             </h1>
             
             {/* Professional subtitle */}
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-muted-foreground mb-8 leading-relaxed">
-              Data & Backend Engineer with Cloud Expertise
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-muted-foreground mb-6 leading-relaxed">
+              Software Engineer with Cloud Expertise
             </h2>
+            
+            {/* Interests - Creative Display */}
+            <div className="mb-8">
+              <p className="text-sm text-muted-foreground mb-3 font-medium">Interests</p>
+              <div className="flex flex-wrap gap-3">
+                <Badge variant="secondary" className="px-4 py-2 text-sm font-medium glass-effect hover:scale-105 transition-transform">
+                  ☁️ Cloud
+                </Badge>
+                <Badge variant="secondary" className="px-4 py-2 text-sm font-medium glass-effect hover:scale-105 transition-transform">
+                  📊 Data
+                </Badge>
+                <Badge variant="secondary" className="px-4 py-2 text-sm font-medium glass-effect hover:scale-105 transition-transform">
+                  🤖 AI
+                </Badge>
+              </div>
+            </div>
             
             {/* Professional description */}
             <div className="mb-10 max-w-2xl">
