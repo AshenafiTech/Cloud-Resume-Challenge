@@ -81,10 +81,10 @@ const HeroSection = () => {
                 <h3 className="text-xl font-bold">What I Do</h3>
                 <div className="space-y-4 max-w-2xl">
                   <div>
-                    <p className="font-semibold mb-1">Backend Development Cloud Solutions</p>
+                    <p className="font-semibold mb-1">Backend Development/Cloud Solutions</p>
                     <p className="text-muted-foreground">
-                      Design and implement scalable cloud architectures on AWS and GCP. 
-                      Build automated deployment pipelines and infrastructure-as-code solutions that ensure reliability and efficiency.
+                      Build robust backend systems and RESTful APIs with modern frameworks. 
+                      Architect and deploy scalable cloud infrastructure on AWS and GCP, implementing CI/CD pipelines and containerized solutions for reliable, production-ready applications.
                     </p>
                   </div>
                   <div>
