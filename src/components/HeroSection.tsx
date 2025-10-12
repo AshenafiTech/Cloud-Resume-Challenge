@@ -46,19 +46,9 @@ const HeroSection = () => {
                 </a>
               </div>
               
-              <div className="space-y-4 mb-12">
-                <p className="text-muted-foreground leading-relaxed text-lg">
-                  Let's talk about code, AI, and the cloud. Building the future, one solution at a time.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  I specialize in architecting scalable cloud solutions and building intelligent systems that solve real-world problems. 
-                  With extensive experience across AWS, GCP, and modern data platforms, I transform complex technical challenges into elegant, efficient solutions.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  From designing robust data pipelines to implementing cutting-edge AI integrations, 
-                  I help organizations leverage cloud technologies to drive innovation and achieve their goals.
-                </p>
-              </div>
+              <p className="text-muted-foreground mb-12 leading-relaxed text-lg">
+                Let's talk about code, AI, and the cloud. Building the future, one solution at a time.
+              </p>
               
               <div className="flex flex-col gap-4">
                 <a href="mailto:ashenafigodanaj@gmail.com" className="text-sm hover:text-primary transition-colors group font-sans">
