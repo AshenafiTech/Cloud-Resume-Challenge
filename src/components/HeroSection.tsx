@@ -28,7 +28,7 @@ const HeroSection = () => {
                 <div className="w-48 h-48 overflow-hidden relative">
                   <img
                     src={profileImage}
-                    alt="Ashenafi Godana Kumbi - Software Engineer"
+                    alt="Ashenafi Godana - Software Engineer"
                     className="w-full h-full object-cover transition-all duration-500"
                   />
                 </div>
@@ -69,7 +69,7 @@ const HeroSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-[0.9] tracking-tighter uppercase">
-              Ashenafi Godana Kumbi
+              Ashenafi Godana
             </h1>
             
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-muted-foreground mb-8 leading-tight tracking-tight">
