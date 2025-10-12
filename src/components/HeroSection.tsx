@@ -81,17 +81,10 @@ const HeroSection = () => {
                 <h3 className="text-xl font-bold">What I Do</h3>
                 <div className="space-y-4 max-w-2xl">
                   <div>
-                    <p className="font-semibold mb-1">Cloud Infrastructure / Platform Engineering</p>
+                    <p className="font-semibold mb-1">Backend Development Cloud Solutions</p>
                     <p className="text-muted-foreground">
                       Design and implement scalable cloud architectures on AWS and GCP. 
                       Build automated deployment pipelines and infrastructure-as-code solutions that ensure reliability and efficiency.
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-semibold mb-1">Data Pipelines / Analytics Systems</p>
-                    <p className="text-muted-foreground">
-                      Create robust ETL workflows and real-time data processing systems. 
-                      Transform raw data into actionable insights through modern analytics platforms and data warehousing solutions.
                     </p>
                   </div>
                   <div>
@@ -99,6 +92,13 @@ const HeroSection = () => {
                     <p className="text-muted-foreground">
                       Develop efficient Python applications and automation scripts. 
                       Build tools that streamline workflows, automate repetitive tasks, and integrate systems for improved productivity.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-1">Data Pipelines / Analytics Systems</p>
+                    <p className="text-muted-foreground">
+                      Create robust ETL workflows and real-time data processing systems. 
+                      Transform raw data into actionable insights through modern analytics platforms and data warehousing solutions.
                     </p>
                   </div>
                 </div>
