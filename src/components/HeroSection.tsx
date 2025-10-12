@@ -95,10 +95,10 @@ const HeroSection = () => {
                     </p>
                   </div>
                   <div>
-                    <p className="font-semibold mb-1">AI Integration / Machine Learning</p>
+                    <p className="font-semibold mb-1">Python Development and Automation</p>
                     <p className="text-muted-foreground">
-                      Integrate AI capabilities into production systems. 
-                      Build and deploy machine learning models that enhance applications with intelligent automation and predictive analytics.
+                      Develop efficient Python applications and automation scripts. 
+                      Build tools that streamline workflows, automate repetitive tasks, and integrate systems for improved productivity.
                     </p>
                   </div>
                 </div>
