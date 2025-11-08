@@ -24,15 +24,15 @@ const HeroSection = () => {
         }`}>
           {/* Main Content */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-[0.9] tracking-tighter text-foreground">
+            <h1 className="hero-title mb-6 text-foreground">
               Ashenafi Godana
             </h1>
-            
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-muted-foreground mb-8 leading-tight tracking-tight">
+
+            <h2 className="hero-subtitle font-bold text-muted-foreground mb-8">
               Software Engineer with Cloud Expertise
             </h2>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+
+            <p className="hero-lead max-w-2xl mx-auto mb-12 leading-relaxed">
               Let's talk about code, AI, and the cloud. Building the future, one solution at a time.
             </p>
 

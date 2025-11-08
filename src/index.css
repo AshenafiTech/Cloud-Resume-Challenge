@@ -296,6 +296,25 @@ All colors MUST be HSL.
     animation: shimmer 2s infinite;
   }
 
+  /* Responsive hero typography using clamp to avoid OS/browser DPI zoom differences */
+  .hero-title {
+    font-weight: 800;
+    line-height: 0.95;
+    /* min 2.25rem, preferred scales with viewport, max 5rem */
+    font-size: clamp(2.25rem, 3.5vw + 1.25rem, 5rem);
+  }
+
+  .hero-subtitle {
+    font-weight: 700;
+    font-size: clamp(1.125rem, 1.6vw + 0.9rem, 2.5rem);
+    line-height: 1.05;
+  }
+
+  .hero-lead {
+    font-size: clamp(1rem, 1.2vw + 0.9rem, 1.125rem);
+    color: hsl(var(--muted-foreground));
+  }
+
   .animate-rotate-slow {
     animation: rotate-slow 20s linear infinite;
   }
