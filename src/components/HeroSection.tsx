@@ -1,5 +1,14 @@
 import CVViewer from "./CVViewer";
-import { Award, Mail, Linkedin, Github, Code2, Cloud, Database } from "lucide-react";
+import {
+  Award,
+  Mail,
+  Linkedin,
+  Github,
+  Code2,
+  Cloud,
+  Database,
+  ChevronsDown,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {
@@ -10,113 +19,132 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0 bg-background">
-      {/* Subtle professional background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background"></div>
-      
-      {/* Subtle accent elements */}
-      <div className="absolute top-32 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-32 left-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
-      
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-0 bg-gradient-to-b from-background to-muted/5">
+      {/* Decorative blurred shapes + subtle SVG */}
+      <div className="absolute inset-0 pointer-events-none">
+        <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0%" stopColor="#a78bfa" stopOpacity="0.06" />
+              <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.04" />
+            </linearGradient>
+          </defs>
+          <rect width="1440" height="600" fill="url(#g1)" />
+        </svg>
+      </div>
+
       <div className="container mx-auto container-padding relative z-10">
-        <div className={`max-w-6xl mx-auto transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        <div className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center transition-all duration-700 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}>
-          {/* Main Content */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-[0.9] tracking-tighter text-foreground">
-              Ashenafi Godana
-            </h1>
-            
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-muted-foreground mb-8 leading-tight tracking-tight">
-              Software Engineer with Cloud Expertise
-            </h2>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-              Let's talk about code, AI, and the cloud. Building the future, one solution at a time.
-            </p>
 
-            {/* Social Links */}
-            <div className="flex flex-wrap justify-center gap-3 mb-16">
-              <a 
-                href="https://www.credly.com/badges/0d2117ef-f462-463a-bdbf-2b8b900387c3" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
-              >
-                <Award className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                <span className="font-sans text-sm">AWS Cloud Captain</span>
-              </a>
-              <a 
-                href="mailto:ashenafigodanaj@gmail.com" 
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
-              >
-                <Mail className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                <span className="font-sans text-sm">Email</span>
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/ashenafig/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
-              >
-                <Linkedin className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                <span className="font-sans text-sm">LinkedIn</span>
-              </a>
-              <a 
-                href="https://github.com/AshenafiTech" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
-              >
-                <Github className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                <span className="font-sans text-sm">GitHub</span>
-              </a>
+          {/* Left: Headline + CTAs */}
+          <div className="py-8">
+            <div className="flex items-start gap-6">
+              {/* Vertical social / contact */}
+              <aside className="hidden md:flex flex-col items-center gap-4 text-muted-foreground">
+                <a href="https://github.com/AshenafiTech" target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:text-foreground transition-colors">
+                  <Github className="w-5 h-5" />
+                </a>
+                <a href="https://www.linkedin.com/in/ashenafig/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-foreground transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="mailto:ashenafigodanaj@gmail.com" aria-label="Email" className="hover:text-foreground transition-colors">
+                  <Mail className="w-5 h-5" />
+                </a>
+                <div className="w-px h-16 bg-border mt-2" />
+              </aside>
+
+              <div>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                  <span className="block text-foreground">Ashenafi Godana</span>
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-indigo-500 to-sky-400 text-3xl sm:text-4xl font-semibold mt-2">Cloud-native Engineer • AI-enabled Apps • Data Pipelines</span>
+                </h1>
+
+                <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
+                  I design and build resilient cloud systems and data platforms. I help teams ship faster with clean code, automated pipelines, and pragmatic architecture.
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <CVViewer>
+                    <button className="inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/95 transition-shadow shadow-md">
+                      Hire / Download CV
+                    </button>
+                  </CVViewer>
+
+                  <a href="#projects" className="inline-flex items-center gap-2 px-5 py-3 border border-border rounded-lg text-sm hover:bg-muted/20 transition">
+                    View Projects
+                  </a>
+
+                  <a href="https://www.credly.com/badges/0d2117ef-f462-463a-bdbf-2b8b900387c3" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-4 py-3 bg-card border border-border rounded-lg text-sm">
+                    <Award className="w-4 h-4" />
+                    AWS Certified
+                  </a>
+                </div>
+
+                <div className="mt-8 text-sm text-muted-foreground">
+                  <strong className="text-foreground">Available for:</strong> contract roles · cloud architecture · data engineering
+                </div>
+              </div>
             </div>
-
-            {/* CTA */}
-            <CVViewer>
-              <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-sans font-semibold hover:bg-primary/90 transition-all shadow-md hover:shadow-lg">
-                Work with Me
-              </button>
-            </CVViewer>
           </div>
 
-          {/* Expertise Cards */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all group hover:shadow-md">
-              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
-                <Code2 className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
+          {/* Right: Spotlight card with expertise + illustration */}
+          <div className="py-8 flex items-center justify-center">
+            <div className="w-full max-w-md p-8 rounded-2xl bg-gradient-to-tr from-card/80 to-background/50 border border-border shadow-xl">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Code2 className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold">What I build</h4>
+                  <p className="text-sm text-muted-foreground">Cloud-native services, data pipelines, and developer tooling.</p>
+                </div>
               </div>
-              <h3 className="text-lg font-bold mb-2 font-sans">Backend Development/Cloud Solutions</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Build robust backend systems and RESTful APIs with modern frameworks. 
-                Architect and deploy scalable cloud infrastructure on AWS and GCP, implementing CI/CD pipelines and containerized solutions.
-              </p>
-            </div>
 
-            <div className="p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all group hover:shadow-md">
-              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
-                <Cloud className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-              </div>
-              <h3 className="text-lg font-bold mb-2 font-sans">Python Development and Automation</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Develop efficient Python applications and automation scripts. 
-                Build tools that streamline workflows, automate repetitive tasks, and integrate systems for improved productivity.
-              </p>
-            </div>
+              <ul className="grid gap-3 mt-4">
+                <li className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded bg-muted flex items-center justify-center mt-1">
+                    <Cloud className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold">Cloud Architecture</div>
+                    <div className="text-xs text-muted-foreground">AWS, GCP, IaC, containers</div>
+                  </div>
+                </li>
 
-            <div className="p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all group hover:shadow-md">
-              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
-                <Database className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-              </div>
-              <h3 className="text-lg font-bold mb-2 font-sans">Data Pipelines / Analytics Systems</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Create robust ETL workflows and real-time data processing systems. 
-                Transform raw data into actionable insights through modern analytics platforms and data warehousing solutions.
-              </p>
+                <li className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded bg-muted flex items-center justify-center mt-1">
+                    <Database className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold">Data & ETL</div>
+                    <div className="text-xs text-muted-foreground">Streaming, warehousing, transformations</div>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded bg-muted flex items-center justify-center mt-1">
+                    <Award className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold">Certifications</div>
+                    <div className="text-xs text-muted-foreground">AWS Cloud Captain</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div className="mt-6 text-xs text-muted-foreground">Want a tailored proposal? Click "Hire / Download CV" and I’ll send a short plan for your project.</div>
             </div>
           </div>
+        </div>
+
+        {/* Scroll down indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+          <a href="#about" className="flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors">
+            <ChevronsDown className="w-6 h-6 animate-bounce" />
+            <span className="text-xs mt-1">Scroll</span>
+          </a>
         </div>
       </div>
     </section>
