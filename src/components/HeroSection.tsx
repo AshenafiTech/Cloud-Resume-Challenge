@@ -17,6 +17,8 @@ const HeroSection = () => {
       {/* Subtle accent elements */}
       <div className="absolute top-32 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-32 left-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+
+      {/* Resume button moved into the header to avoid isolation in the hero */}
       
       <div className="container mx-auto container-padding relative z-10">
         <div className={`max-w-6xl mx-auto transition-all duration-1000 ${
@@ -74,12 +76,7 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* CTA */}
-            <CVViewer>
-              <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-sans font-semibold hover:bg-primary/90 transition-all shadow-md hover:shadow-lg">
-                Work with Me
-              </button>
-            </CVViewer>
+            {/* CTA was moved to a compact top-right Resume button to save space */}
           </div>
 
           {/* Expertise Cards */}
