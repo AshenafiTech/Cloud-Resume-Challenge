@@ -1,5 +1,5 @@
 import CVViewer from "./CVViewer";
-import { Award, Mail, Linkedin, Github, Sparkles, Code2, Cloud, Database } from "lucide-react";
+import { Award, Mail, Linkedin, Github, Code2, Cloud, Database } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {
@@ -24,11 +24,6 @@ const HeroSection = () => {
         }`}>
           {/* Main Content */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-muted border border-border mb-8">
-              <Sparkles className="w-4 h-4 text-foreground" />
-              <span className="text-sm font-sans text-foreground">Available for opportunities</span>
-            </div>
-            
             <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-[0.9] tracking-tighter text-foreground">
               Ashenafi Godana
             </h1>
