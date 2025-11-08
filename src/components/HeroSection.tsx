@@ -10,13 +10,13 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
-      {/* Vibrant gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-secondary/10"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0 bg-background">
+      {/* Subtle professional background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background"></div>
       
-      {/* Animated accent elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-glow"></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
+      {/* Subtle accent elements */}
+      <div className="absolute top-32 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-32 left-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto container-padding relative z-10">
         <div className={`max-w-6xl mx-auto transition-all duration-1000 ${
@@ -24,12 +24,12 @@ const HeroSection = () => {
         }`}>
           {/* Main Content */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-sans text-primary">Available for opportunities</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-muted border border-border mb-8">
+              <Sparkles className="w-4 h-4 text-foreground" />
+              <span className="text-sm font-sans text-foreground">Available for opportunities</span>
             </div>
             
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-[0.9] tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-foreground via-primary to-secondary">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-[0.9] tracking-tighter text-foreground">
               Ashenafi Godana
             </h1>
             
@@ -42,46 +42,46 @@ const HeroSection = () => {
             </p>
 
             {/* Social Links */}
-            <div className="flex flex-wrap justify-center gap-4 mb-16">
+            <div className="flex flex-wrap justify-center gap-3 mb-16">
               <a 
                 href="https://www.credly.com/badges/0d2117ef-f462-463a-bdbf-2b8b900387c3" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent/10 border border-accent/20 hover:bg-accent/20 transition-all group backdrop-blur-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
               >
-                <Award className="w-4 h-4 text-accent group-hover:scale-110 transition-transform" />
+                <Award className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 <span className="font-sans text-sm">AWS Cloud Captain</span>
               </a>
               <a 
                 href="mailto:ashenafigodanaj@gmail.com" 
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-all group backdrop-blur-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
               >
-                <Mail className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
+                <Mail className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 <span className="font-sans text-sm">Email</span>
               </a>
               <a 
                 href="https://www.linkedin.com/in/ashenafig/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-all group backdrop-blur-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
               >
-                <Linkedin className="w-4 h-4 text-secondary group-hover:scale-110 transition-transform" />
+                <Linkedin className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 <span className="font-sans text-sm">LinkedIn</span>
               </a>
               <a 
                 href="https://github.com/AshenafiTech" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-foreground/10 border border-foreground/20 hover:bg-foreground/20 transition-all group backdrop-blur-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
               >
-                <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <Github className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 <span className="font-sans text-sm">GitHub</span>
               </a>
             </div>
 
             {/* CTA */}
             <CVViewer>
-              <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-sans font-semibold hover:bg-primary/90 transition-all hover:scale-105 shadow-lg hover:shadow-xl">
+              <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-sans font-semibold hover:bg-primary/90 transition-all shadow-md hover:shadow-lg">
                 Work with Me
               </button>
             </CVViewer>
@@ -89,9 +89,9 @@ const HeroSection = () => {
 
           {/* Expertise Cards */}
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="p-6 rounded-xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-primary/50 transition-all group hover-lift">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <Code2 className="w-6 h-6 text-primary" />
+            <div className="p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all group hover:shadow-md">
+              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
+                <Code2 className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
               </div>
               <h3 className="text-lg font-bold mb-2 font-sans">Backend Development/Cloud Solutions</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -100,9 +100,9 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-secondary/50 transition-all group hover-lift">
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
-                <Cloud className="w-6 h-6 text-secondary" />
+            <div className="p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all group hover:shadow-md">
+              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
+                <Cloud className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
               </div>
               <h3 className="text-lg font-bold mb-2 font-sans">Python Development and Automation</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -111,9 +111,9 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="p-6 rounded-xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-accent/50 transition-all group hover-lift">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                <Database className="w-6 h-6 text-accent" />
+            <div className="p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all group hover:shadow-md">
+              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
+                <Database className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
               </div>
               <h3 className="text-lg font-bold mb-2 font-sans">Data Pipelines / Analytics Systems</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
