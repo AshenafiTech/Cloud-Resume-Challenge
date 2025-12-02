@@ -33,11 +33,11 @@ const HeroSection = () => {
           {/* Main Content */}
           <div className="text-center mb-16">
             <h1 className="hero-title mb-6 text-white font-bold">
-              Your guide through the Cloud
+              Software Engineer specializing in Cloud & DevOps
             </h1>
 
             <p className="hero-lead max-w-3xl mx-auto mb-12 leading-relaxed text-white/90 text-xl">
-              I help businesses and teams achieve their digital objectives with confidence and clarity through cloud engineering and software development.
+              Building scalable cloud infrastructure and robust software solutions. Expertise in cloud architecture, automation, CI/CD pipelines, and full-stack development.
             </p>
 
             {/* CTA Button */}
@@ -49,7 +49,7 @@ const HeroSection = () => {
                 }}
                 className="px-8 py-4 bg-white text-primary rounded-full font-sans font-semibold hover:bg-white/90 transition-all shadow-lg hover:shadow-xl inline-flex items-center gap-2"
               >
-                Ready to Innovate?
+                Let's Build Something
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
