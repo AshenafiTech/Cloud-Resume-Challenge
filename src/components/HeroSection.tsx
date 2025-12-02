@@ -1,6 +1,7 @@
 import CVViewer from "./CVViewer";
 import { Award, Mail, Linkedin, Github, Code2, Cloud, Database } from "lucide-react";
 import { useEffect, useState } from "react";
+import heroBackground from "@/assets/hero-public-speaking.jpg";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,23 +12,19 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
-      {/* CC Tech inspired gradient background */}
-      <div className="absolute inset-0" style={{
-        background: 'linear-gradient(180deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 60%, hsl(var(--accent)) 100%)'
-      }}></div>
+      {/* Public speaking background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${heroBackground})`
+        }}
+      ></div>
       
-      {/* Floating 3D cube elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/10 backdrop-blur-sm rounded-lg transform rotate-45 animate-float"></div>
-        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-white/10 backdrop-blur-sm rounded-lg transform -rotate-12 animate-float-slow"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-28 h-28 bg-white/10 backdrop-blur-sm rounded-lg transform rotate-12 animate-float"></div>
-      </div>
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-primary/70"></div>
       
-      {/* Dotted wave pattern overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 opacity-30" style={{
-        backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px)',
-        backgroundSize: '20px 20px'
-      }}></div>
+      {/* Gradient overlay for depth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-transparent to-primary/70"></div>
       
       <div className="container mx-auto container-padding relative z-10">
         <div className={`max-w-6xl mx-auto transition-all duration-1000 ${
