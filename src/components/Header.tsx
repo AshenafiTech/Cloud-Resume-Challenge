@@ -24,8 +24,8 @@ const Header = () => {
   };
 
   return (
-    <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
-      isScrolled ? "glass-effect" : "bg-background/95 backdrop-blur-sm border-border/50"
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      isScrolled ? "bg-primary shadow-lg" : "bg-primary"
     }`}>
       <div className="container mx-auto container-padding">
         <div className="max-w-7xl mx-auto flex h-16 items-center justify-between">
@@ -36,18 +36,21 @@ const Header = () => {
               className="focus:outline-none bg-transparent border-none p-0 cursor-pointer"
               style={{ lineHeight: 1 }}
             >
-              <span className="text-xl font-bold gradient-text transition duration-200 hover:brightness-125">Ashenafi</span>
+              <span className="text-xl font-bold text-white transition duration-200 hover:brightness-125">Ashenafi</span>
             </button>
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection("about")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</button>
-            <button onClick={() => scrollToSection("projects")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</button>
-            <button onClick={() => scrollToSection("certificates")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Certifications</button>
-            <button onClick={() => scrollToSection("blogs")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Blog</button>
-            <CVViewer>
-              <Button size="sm" className="mr-2 medium-shadow hover:large-shadow transition-all duration-300">Resume</Button>
-            </CVViewer>
+            <button onClick={() => scrollToSection("about")} className="text-sm font-medium text-white/80 hover:text-white transition-colors">About</button>
+            <button onClick={() => scrollToSection("projects")} className="text-sm font-medium text-white/80 hover:text-white transition-colors">Projects</button>
+            <button onClick={() => scrollToSection("certificates")} className="text-sm font-medium text-white/80 hover:text-white transition-colors">Certifications</button>
+            <button onClick={() => scrollToSection("blogs")} className="text-sm font-medium text-white/80 hover:text-white transition-colors">Blog</button>
+            <button 
+              onClick={() => scrollToSection("contact")}
+              className="px-5 py-2 bg-white text-primary rounded-full font-medium hover:bg-white/90 transition-all"
+            >
+              Contact
+            </button>
             <ThemeToggle />
           </nav>
           {/* Mobile Navigation */}
@@ -55,7 +58,7 @@ const Header = () => {
             <ThemeToggle />
             <button
               aria-label={menuOpen ? "Close menu" : "Open menu"}
-              className="p-2 hover:bg-accent rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+              className="p-2 text-white hover:bg-white/10 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-white/20"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -95,11 +98,12 @@ const Header = () => {
                   >
                     Blog
                   </button>
-                   <div className="px-6 py-3">
-                     <CVViewer>
-                       <Button size="sm" className="w-full mb-2" onClick={() => setMenuOpen(false)}>Resume</Button>
-                     </CVViewer>
-                   </div>
+                   <button 
+                    onClick={() => {scrollToSection("contact"); setMenuOpen(false);}} 
+                    className="mx-6 mb-4 px-5 py-2 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-all text-center"
+                  >
+                    Contact
+                  </button>
                 </nav>
               </div>
             </>
