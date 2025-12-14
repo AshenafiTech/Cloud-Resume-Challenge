@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
-import CVViewer from "./CVViewer";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -25,7 +23,9 @@ const Header = () => {
 
   return (
     <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-      isScrolled ? "bg-primary shadow-lg" : "bg-primary"
+      isScrolled 
+        ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg" 
+        : "bg-transparent"
     }`}>
       <div className="container mx-auto container-padding">
         <div className="max-w-7xl mx-auto flex h-16 items-center justify-between">
@@ -36,18 +36,18 @@ const Header = () => {
               className="focus:outline-none bg-transparent border-none p-0 cursor-pointer"
               style={{ lineHeight: 1 }}
             >
-              <span className="text-xl font-bold text-white transition duration-200 hover:brightness-125">Ashenafi</span>
+              <span className="text-xl font-bold gradient-text transition duration-200 hover:opacity-80">Ashenafi</span>
             </button>
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection("about")} className="text-sm font-medium text-white/80 hover:text-white transition-colors">About</button>
-            <button onClick={() => scrollToSection("projects")} className="text-sm font-medium text-white/80 hover:text-white transition-colors">Projects</button>
-            <button onClick={() => scrollToSection("certificates")} className="text-sm font-medium text-white/80 hover:text-white transition-colors">Certifications</button>
-            <button onClick={() => scrollToSection("blogs")} className="text-sm font-medium text-white/80 hover:text-white transition-colors">Blog</button>
+            <button onClick={() => scrollToSection("about")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</button>
+            <button onClick={() => scrollToSection("projects")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</button>
+            <button onClick={() => scrollToSection("certificates")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Certifications</button>
+            <button onClick={() => scrollToSection("blogs")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Blog</button>
             <button 
               onClick={() => scrollToSection("contact")}
-              className="px-5 py-2 bg-white text-primary rounded-full font-medium hover:bg-white/90 transition-all"
+              className="px-5 py-2 btn-gradient text-primary-foreground rounded-full font-medium hover:scale-105 transition-all"
             >
               Contact
             </button>
@@ -58,7 +58,7 @@ const Header = () => {
             <ThemeToggle />
             <button
               aria-label={menuOpen ? "Close menu" : "Open menu"}
-              className="p-2 text-white hover:bg-white/10 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-white/20"
+              className="p-2 text-foreground hover:bg-muted rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -69,38 +69,38 @@ const Header = () => {
           {menuOpen && (
             <>
               <div 
-                className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden" 
+                className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40 md:hidden" 
                 onClick={() => setMenuOpen(false)}
               />
-              <div className="absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border shadow-lg z-50 md:hidden">
+              <div className="absolute top-16 left-0 right-0 bg-card/95 backdrop-blur-xl border-b border-border shadow-lg z-50 md:hidden">
                 <nav className="flex flex-col py-4">
                   <button 
                     onClick={() => {scrollToSection("about"); setMenuOpen(false);}} 
-                    className="px-6 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-colors"
+                    className="px-6 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
                   >
                     About
                   </button>
                   <button 
                     onClick={() => {scrollToSection("projects"); setMenuOpen(false);}} 
-                    className="px-6 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-colors"
+                    className="px-6 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
                   >
                     Projects
                   </button>
                   <button 
                     onClick={() => {scrollToSection("certificates"); setMenuOpen(false);}} 
-                    className="px-6 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-colors"
+                    className="px-6 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
                   >
                     Certifications
                   </button>
                   <button 
                     onClick={() => {scrollToSection("blogs"); setMenuOpen(false);}} 
-                    className="px-6 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 transition-colors"
+                    className="px-6 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
                   >
                     Blog
                   </button>
-                   <button 
+                  <button 
                     onClick={() => {scrollToSection("contact"); setMenuOpen(false);}} 
-                    className="mx-6 mb-4 px-5 py-2 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-all text-center"
+                    className="mx-6 mt-2 mb-4 px-5 py-2 btn-gradient text-primary-foreground rounded-full font-medium hover:opacity-90 transition-all text-center"
                   >
                     Contact
                   </button>
