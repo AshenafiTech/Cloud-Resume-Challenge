@@ -1,12 +1,44 @@
 import { Mail, Linkedin, Github, Sparkles, Cloud, Brain, Code2, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 
+const roles = ["Software Engineer", "AWS Cloud Captain", "AI Enthusiast", "DevOps Engineer"];
+
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  useEffect(() => {
+    const currentRole = roles[currentRoleIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+    const pauseTime = isDeleting ? 500 : 2000;
+
+    if (!isDeleting && displayText === currentRole) {
+      setTimeout(() => setIsDeleting(true), pauseTime);
+      return;
+    }
+
+    if (isDeleting && displayText === "") {
+      setIsDeleting(false);
+      setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      if (isDeleting) {
+        setDisplayText(currentRole.slice(0, displayText.length - 1));
+      } else {
+        setDisplayText(currentRole.slice(0, displayText.length + 1));
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, currentRoleIndex]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
@@ -43,8 +75,10 @@ const HeroSection = () => {
           {/* Main Content */}
           <div className="text-center mb-12">
             <h1 className="hero-title mb-6 text-foreground">
-              <span className="block">Software Engineer</span>
-              <span className="block mt-2 gradient-text">
+              <span className="block gradient-text min-h-[1.2em]">
+                {displayText}<span className="animate-pulse">|</span>
+              </span>
+              <span className="block mt-2 text-muted-foreground text-2xl md:text-3xl font-normal">
                 AI & Cloud Expert
               </span>
             </h1>

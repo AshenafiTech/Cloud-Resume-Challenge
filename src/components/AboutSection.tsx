@@ -39,7 +39,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-padding section-bg-alt relative overflow-hidden">
+    <section id="about" className="py-20 md:py-28 section-bg-alt relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(270_70%_60%_/_0.05),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(200_80%_55%_/_0.05),transparent_50%)]"></div>

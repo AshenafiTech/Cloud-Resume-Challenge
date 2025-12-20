@@ -1,4 +1,3 @@
-import ThemeToggle from "./ThemeToggle";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -51,11 +50,9 @@ const Header = () => {
             >
               Contact
             </button>
-            <ThemeToggle />
           </nav>
           {/* Mobile Navigation */}
           <div className="md:hidden flex items-center gap-2">
-            <ThemeToggle />
             <button
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               className="p-2 text-foreground hover:bg-muted rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20"
