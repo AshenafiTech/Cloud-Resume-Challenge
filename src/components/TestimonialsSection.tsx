@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
                     <Quote className="w-8 h-8 text-primary/30 mr-2" />
                     <div className="flex">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                       ))}
                     </div>
                   </div>
