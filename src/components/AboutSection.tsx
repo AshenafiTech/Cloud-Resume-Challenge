@@ -1,75 +1,60 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Users, Cloud, Mic, Heart } from "lucide-react";
+import { Cloud, Users, BookOpen, Target } from "lucide-react";
 
 const AboutSection = () => {
   const highlights = [
     {
-      icon: <Cloud className="h-6 w-6" />,
-      title: "Cloud & Backend Developer", 
-      description: "I partner with companies to build robust, scalable backend and cloud solutions using modern technologies and best practices.",
-      gradient: "from-secondary/20 to-secondary/5",
-      iconColor: "text-secondary",
-      borderColor: "border-secondary/20"
+      icon: <Cloud className="h-5 w-5" />,
+      title: "Cloud & Backend Engineering", 
+      description: "Building robust, scalable backend solutions with AWS, GCP, and modern frameworks. Certified Solutions Architect with hands-on production experience."
     },
     {
-      icon: <Mic className="h-6 w-6" />,
-      title: "Community Leader & Speaker",
-      description: "Active in developer communities, I speak at tech events and lead initiatives that bring developers together to learn and grow.",
-      gradient: "from-accent/20 to-accent/5",
-      iconColor: "text-accent",
-      borderColor: "border-accent/20"
+      icon: <Target className="h-5 w-5" />,
+      title: "AI & Machine Learning",
+      description: "Developing intelligent systems using NLP, computer vision, and predictive analytics. Google Cloud Professional ML Engineer certified."
     },
     {
-      icon: <Users className="h-6 w-6" />,
-      title: "Mentor & Content Creator",
-      description: "I have mentored students through cloud clubs and the ALX Cloud Computing Program, sharing knowledge through blogs and YouTube videos to help others grow in technology.",
-      gradient: "from-primary/20 to-primary/5",
-      iconColor: "text-primary",
-      borderColor: "border-primary/20"
+      icon: <Users className="h-5 w-5" />,
+      title: "Technical Leadership",
+      description: "AWS Cloud Captain leading developer communities. Speaker at tech events, mentoring the next generation of cloud practitioners."
     },
     {
-      icon: <Heart className="h-6 w-6" />,
-      title: "Professional & Empathetic",
-      description: "I combine technical expertise with emotional intelligence, bringing both professionalism and empathy to every project and interaction.",
-      gradient: "from-accent/20 to-accent/5",
-      iconColor: "text-accent",
-      borderColor: "border-accent/20"
+      icon: <BookOpen className="h-5 w-5" />,
+      title: "Knowledge Sharing",
+      description: "Technical writer on Medium covering cloud architecture patterns. Creating educational content to help others grow in technology."
     }
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 section-bg-alt relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(270_70%_60%_/_0.05),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(200_80%_55%_/_0.05),transparent_50%)]"></div>
-      
-      <div className="container mx-auto container-padding relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center space-y-6 mb-16">
-            <Badge variant="secondary" className="text-sm bg-primary/10 text-primary border-primary/20">About Me</Badge>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight text-foreground">
-              Passionate about <span className="gradient-text">Technology & Community</span>
+    <section id="about" className="section-padding section-bg-alt">
+      <div className="container mx-auto container-padding">
+        <div className="max-w-5xl mx-auto">
+          {/* Section Header */}
+          <div className="section-header">
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-3">About Me</p>
+            <h2 className="section-title">
+              Turning Complex Problems into Elegant Solutions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              I'm a software engineering student with a passion for cloud technologies, backend development, 
-              and building communities. Here's what defines my approach to technology and life.
+            <p className="section-subtitle">
+              Software Engineering student with a track record of building production systems 
+              and leading technical communities. Here's what I bring to the table.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-6">
+
+          {/* Highlights Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
             {highlights.map((highlight, index) => (
-              <Card key={index} className={`vibrant-card border ${highlight.borderColor} hover:scale-[1.02] transition-all duration-300 group overflow-hidden`}>
-                <div className={`absolute inset-0 bg-gradient-to-br ${highlight.gradient} opacity-50`}></div>
-                <CardContent className="p-8 relative z-10">
-                  <div className="flex items-start space-x-4">
+              <Card key={index} className="professional-card hover-lift">
+                <CardContent className="p-6">
+                  <div className="flex gap-4">
                     <div className="flex-shrink-0">
-                      <div className={`w-14 h-14 bg-card rounded-xl flex items-center justify-center ${highlight.iconColor} border border-border group-hover:scale-110 transition-all duration-300`}>
+                      <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center text-primary">
                         {highlight.icon}
                       </div>
                     </div>
-                    <div className="space-y-3">
-                      <h3 className="text-xl font-semibold text-foreground">{highlight.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{highlight.description}</p>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">{highlight.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{highlight.description}</p>
                     </div>
                   </div>
                 </CardContent>
