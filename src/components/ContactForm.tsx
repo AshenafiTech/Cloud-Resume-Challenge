@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Send, CheckCircle, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle, Linkedin, Github, ArrowRight } from "lucide-react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -48,144 +47,152 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="section-padding section-bg-alt relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,hsl(270_70%_60%_/_0.08),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,hsl(200_80%_55%_/_0.08),transparent_50%)]"></div>
-      
-      <div className="container mx-auto container-padding relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="mb-4 bg-secondary/10 text-secondary border-secondary/20">Get In Touch</Badge>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-              Let's <span className="gradient-text-secondary">Connect</span>
+    <section id="contact" className="section-padding section-bg-alt">
+      <div className="container mx-auto container-padding">
+        <div className="max-w-4xl mx-auto">
+          {/* Section Header */}
+          <div className="section-header">
+            <p className="text-sm font-medium text-primary uppercase tracking-wider mb-3">Contact</p>
+            <h2 className="section-title">
+              Let's Work Together
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Have a project in mind or want to discuss cloud technologies? I'd love to hear from you.
+            <p className="section-subtitle">
+              Have a project in mind or want to discuss opportunities? I'd love to hear from you.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-5 gap-8">
             {/* Contact Info */}
-            <div className="space-y-8">
+            <div className="md:col-span-2 space-y-6">
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-foreground">Contact Information</h3>
+                <h3 className="font-semibold text-foreground mb-4">Get in Touch</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20">
-                      <Mail className="w-6 h-6 text-primary" />
-                    </div>
+                  <div className="flex items-start gap-3">
+                    <Mail className="w-5 h-5 text-primary mt-0.5" />
                     <div>
-                      <p className="font-medium text-foreground">Email</p>
-                      <p className="text-muted-foreground">ashenafigodanaj@gmail.com</p>
+                      <p className="text-sm font-medium text-foreground">Email</p>
+                      <a href="mailto:ashenafigodanaj@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        ashenafigodanaj@gmail.com
+                      </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center border border-secondary/20">
-                      <MapPin className="w-6 h-6 text-secondary" />
-                    </div>
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-primary mt-0.5" />
                     <div>
-                      <p className="font-medium text-foreground">Location</p>
-                      <p className="text-muted-foreground">Available for remote work</p>
+                      <p className="text-sm font-medium text-foreground">Location</p>
+                      <p className="text-sm text-muted-foreground">Available for remote work</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <Card className="vibrant-card border-border/50">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold mb-4 text-foreground">Quick Response</h4>
-                  <p className="text-muted-foreground mb-4">
-                    I typically respond to messages within 24 hours. For urgent matters, 
-                    feel free to reach out via LinkedIn.
-                  </p>
-                  <div className="flex space-x-3">
-                    <a href="https://www.linkedin.com/in/ashenafig/" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" size="sm" className="border-border/50 hover:border-primary/30 hover:bg-primary/10">
-                        <Linkedin className="w-4 h-4 mr-2" />
-                        LinkedIn
-                      </Button>
-                    </a>
-                    <a href="https://github.com/AshenafiTech" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" size="sm" className="border-border/50 hover:border-secondary/30 hover:bg-secondary/10">
-                        <Github className="w-4 h-4 mr-2" />
-                        GitHub
-                      </Button>
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <h4 className="text-sm font-medium text-foreground mb-3">Connect</h4>
+                <div className="flex gap-2">
+                  <a 
+                    href="https://www.linkedin.com/in/ashenafig/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-md border border-border hover:border-primary/30 hover:bg-muted/50 transition-all"
+                  >
+                    <Linkedin className="w-4 h-4 text-muted-foreground" />
+                  </a>
+                  <a 
+                    href="https://github.com/AshenafiTech" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-md border border-border hover:border-primary/30 hover:bg-muted/50 transition-all"
+                  >
+                    <Github className="w-4 h-4 text-muted-foreground" />
+                  </a>
+                </div>
+              </div>
+
+              <p className="text-sm text-muted-foreground">
+                I typically respond within 24 hours. For urgent inquiries, reach out via LinkedIn.
+              </p>
             </div>
 
             {/* Contact Form */}
-            <Card className="vibrant-card border-border/50">
+            <Card className="md:col-span-3 professional-card">
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-foreground">Name</label>
-                      <Input
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="Your name"
-                        required
-                        className="bg-card border-border/50 focus:border-primary"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2 text-foreground">Email</label>
-                      <Input
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="your.email@example.com"
-                        required
-                        className="bg-card border-border/50 focus:border-primary"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-foreground">Subject</label>
-                    <Input
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      placeholder="What's this about?"
-                      required
-                      className="bg-card border-border/50 focus:border-primary"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-foreground">Message</label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell me about your project or question..."
-                      rows={5}
-                      required
-                      className="bg-card border-border/50 focus:border-primary"
-                    />
-                  </div>
-                  
-                  {isSubmitted ? (
-                    <div className="text-center py-4">
-                      <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-2" />
-                      <p className="text-green-500 font-medium">Message sent successfully!</p>
-                      <p className="text-sm text-muted-foreground">I'll get back to you soon.</p>
-                    </div>
-                  ) : (
-                    <Button type="submit" className="w-full btn-gradient group hover:scale-[1.02] transition-all" disabled={isSubmitting}>
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
-                      <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                {isSubmitted ? (
+                  <div className="text-center py-8">
+                    <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                    <h3 className="font-semibold text-foreground mb-2">Message Sent</h3>
+                    <p className="text-sm text-muted-foreground">Thank you for reaching out. I'll get back to you soon.</p>
+                    <Button 
+                      variant="outline" 
+                      className="mt-4"
+                      onClick={() => setIsSubmitted(false)}
+                    >
+                      Send Another Message
                     </Button>
-                  )}
-                </form>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">Name</label>
+                        <Input
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          placeholder="Your name"
+                          required
+                          className="bg-background"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-foreground mb-2">Email</label>
+                        <Input
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="you@example.com"
+                          required
+                          className="bg-background"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">Subject</label>
+                      <Input
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        placeholder="What's this about?"
+                        required
+                        className="bg-background"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">Message</label>
+                      <Textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Tell me about your project..."
+                        rows={4}
+                        required
+                        className="bg-background resize-none"
+                      />
+                    </div>
+                    
+                    <Button 
+                      type="submit" 
+                      className="w-full btn-primary" 
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </form>
+                )}
               </CardContent>
             </Card>
           </div>
