@@ -1,74 +1,8 @@
-import {
-  Mail,
-  Linkedin,
-  Github,
-  ArrowRight,
-  Download,
-  Code2,
-  Braces,
-  Atom,
-  Zap,
-  Cloud,
-  CloudCog,
-  Boxes,
-  Network,
-  Database,
-  Wind,
-  PanelsTopLeft,
-  Pi
-} from "lucide-react";
+import { Mail, Linkedin, Github, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const roles = ["Software Engineer", "DevOps Engineer"];
-
-const tools = [
-  { name: "Python", Icon: Pi },
-  { name: "JavaScript", Icon: Code2 },
-  { name: "TypeScript", Icon: Braces },
-  { name: "React", Icon: Atom },
-  { name: "FastAPI", Icon: Zap },
-  { name: "Django", Icon: PanelsTopLeft },
-  { name: "AWS", Icon: Cloud },
-  { name: "GCP", Icon: CloudCog },
-  { name: "Docker", Icon: Boxes },
-  { name: "Kubernetes", Icon: Network },
-  { name: "PostgreSQL", Icon: Database },
-  { name: "TailwindCSS", Icon: Wind },
-];
-
-type ToolsMarqueeProps = {
-  prefersReducedMotion: boolean;
-};
-
-const ToolsMarquee = ({ prefersReducedMotion }: ToolsMarqueeProps) => {
-  const duplicatedTools = [...tools, ...tools];
-
-  return (
-    <div className="w-full overflow-hidden py-6 border-t border-border/70">
-      <div className="flex items-center gap-3 px-4 text-xs font-medium uppercase tracking-wide text-muted-foreground/80 mb-2">
-        <span className="inline-block h-2 w-2 rounded-full bg-primary/70" aria-hidden="true" />
-        <span>Tooling I ship with</span>
-      </div>
-      <div
-        className={`flex ${prefersReducedMotion ? "" : "animate-marquee"}`}
-        style={prefersReducedMotion ? undefined : { animationDuration: "35s" }}
-      >
-        {duplicatedTools.map((tool, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 mx-3 px-4 py-2 rounded-md bg-card border border-border/70 text-foreground shadow-sm hover:border-primary/30 transition-colors"
-          >
-            <div className="flex items-center gap-2">
-              <tool.Icon className="h-4 w-4 text-primary" aria-hidden="true" />
-              <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">{tool.name}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -218,10 +152,6 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-      </div>
-
-      <div className="relative z-10 mt-auto">
-        <ToolsMarquee prefersReducedMotion={prefersReducedMotion} />
       </div>
     </section>
   );

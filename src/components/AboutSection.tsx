@@ -36,8 +36,7 @@ const AboutSection = () => {
               Turning Complex Problems into Elegant Solutions
             </h2>
             <p className="section-subtitle">
-              Software Engineering student with a track record of building production systems 
-              and leading technical communities. Here's what I bring to the table.
+              Software Engineer with a track record of building production systems and leading technical communities. Here's what I bring to the table.
             </p>
           </div>
 
